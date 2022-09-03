@@ -1,0 +1,32 @@
+#bun-logo {
+    height: 20%;     /*check px way*/
+    width: 20%;
+}
+
+h1, h2, p{
+    text-align: center;
+}
+
+
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 24px;
+}
+
+
+.product_img{
+    height: 15%; /*check px way*/
+    width: 15%;
+    border: 3px solid black;
+}
+
+/*.product{
+} */
