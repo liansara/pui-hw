@@ -13,13 +13,33 @@ hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i
     background-color: #333
 }
 
+#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+    text-decoration: none;
+}
+#PRODUCTS:visited {
+    text-decoration: none;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+}
+
 #menu{
     text-align: center;
     font-size: 24px;
 }
 
-h1 {
+#PRODUCTS {
+    display: block;
+    margin: auto;
+    width: 100px;    /* result of trial & error. why does this 100 px work?! */
     font-size: 20px;
+    color: black;
+
 }
 
 h2 {
