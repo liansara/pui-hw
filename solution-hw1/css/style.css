@@ -1,13 +1,11 @@
 #bun-logo {
-    height: 20%;     /*check px way*/
-    width: 20%;
+    height: 200px;     /*check px way*/
+    width: 200px;
 }
 
-h1, h2, p{
+h1, h2, p {
     text-align: center;
 }
-
-
 
 h1 {
     font-size: 20px;
@@ -21,12 +19,20 @@ p {
     font-size: 24px;
 }
 
+.product {
+    display: block;
+    margin: auto;
+}
 
 .product_img{
-    height: 15%; /*check px way*/
-    width: 15%;
+    height: 200px; 
+    width: 200px;
     border: 3px solid black;
 }
 
-/*.product{
-} */
+
+
+
+
+
+
