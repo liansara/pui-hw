@@ -1,0 +1,86 @@
+#bun-logo {
+    height: 200px;     
+    width: 200px;
+}
+
+#topLine {
+    border: none;
+    height: 3px;
+    background-color: #333
+}
+
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+#Title {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.product {
+    display: block;
+    margin: auto;
+    width: 250px;    
+    padding: 6px;
+    text-align: center;
+}
+
+.product_img{
+    width: 100%;   
+    border: 3px solid black;  
+}
+
+.REMOVE {
+    font-size: 10px;
+    text-decoration: underline; /*https://www.w3schools.com/cssref/pr_text_text-decoration.asp*/
+}
+
+.SUBtotal {
+    padding: 3px 0 25px;
+    font-size: larger;
+}
+
+#subtotal_line {
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: none;
+    height: 3px;
+    background-color: #333
+    
+}
+
+#Total_block {
+    display: block;
+    margin: auto;
+    width: 133px;
+    text-align: center
+}
+
+#Total_amount {
+    font-size: larger;
+    padding: 12px;
+}
+
+#Checkout {
+    width: 100%;
+    border: 2px solid black;   /*  https://www.w3schools.com/howto/howto_css_outline_buttons.asp  */
+    padding: 5px;
+    font-weight: bold;    /*  https://www.w3schools.com/cssref/pr_font_weight.asp  */
+}
+
+
+#Checkout:hover{
+    background-color: yellow;
+}

@@ -3,8 +3,19 @@
     width: 200px;
 }
 
-h1, h2, p {
+h1, h2 {
     text-align: center;
+}
+
+hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag  */
+    border: none;
+    height: 3px;
+    background-color: #333
+}
+
+#menu{
+    text-align: center;
+    font-size: 24px;
 }
 
 h1 {
@@ -15,20 +26,28 @@ h2 {
     font-size: 18px;
 }
 
-p {
-    font-size: 24px;
-}
-
 .product {
     display: block;
     margin: auto;
+    width: 200px;     /*TA's help. But how does he know 200px??? */
+    padding: 6px;
+      /* text-align: center;  https://www.youtube.com/watch?v=JenSL-4cJvE */
 }
 
 .product_img{
-    height: 200px; 
-    width: 200px;
-    border: 3px solid black;
+    width: 100%;     /*TA's help: The image will adjust to fit within its parent element */
+    border: 3px solid black;  
 }
+
+
+.product:hover{
+    background-color: yellow;
+    
+}
+
+
+
+
 
 
 

@@ -1,0 +1,75 @@
+#bun-logo {
+    height: 200px;     
+    width: 200px;
+}
+
+#topLine {
+    border: none;
+    height: 3px;
+    background-color: #333
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+
+#item_title{
+    text-align: center;
+    font-size: 24px;
+}
+
+.product {
+    display: block;
+    margin: auto;
+    width: 400px;
+}
+
+.product_img {
+    width: 100%;
+    border: 3px solid black;
+}
+
+#cust{
+    text-align: left;
+    margin: auto;
+    width:180px;
+}
+
+.options {
+    display: block;
+    margin: auto;
+    width:180px;
+
+}
+
+#glazing {
+    width: 160px;
+}
+
+#size {
+    width: 160px; 
+}
+
+#subtotal {
+    display: block;
+    margin: auto;
+    width: 180px;
+    padding: 50px;
+}
+
+#AddtoCart {
+    display: inline;
+}
+
+#AddtoCart:hover{
+    background-color: yellow;
+}
