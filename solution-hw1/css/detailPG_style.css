@@ -9,17 +9,53 @@
     background-color: #333
 }
 
-h1, h2 {
+/*----------------- PRODUCT tab------------------*/
+#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+    text-decoration: none;
+}
+#PRODUCTS:visited {
+    text-decoration: none;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+#PRODUCTS {
+    display: block;
+    margin: auto;
+    width: 100px;     /*result of trial & error. why does this 100 px work?! */
     text-align: center;
-}
-
-h1 {
     font-size: 20px;
+    color: black;
 }
 
-h2 {
-    font-size: 18px;
+/*----------------- CART tab------------------*/
+#CART:link {                    
+    text-decoration: none;
+    color:black;
 }
+#CART:visited {
+    text-decoration: none;
+    color:black;
+}
+
+#CART {
+    display: block;
+    margin: auto;
+    width: 50px;    
+    text-align: center;
+    font-size: 17px;
+    color: black;
+}
+
+#CART:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*-----------------body centent------------------*/
 
 
 #item_title{

@@ -3,16 +3,13 @@
     width: 200px;
 }
 
-h1, h2 {
-    text-align: center;
-}
-
 hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag  */
     border: none;
     height: 3px;
     background-color: #333
 }
 
+/*----------------- PRODUCT tab------------------*/
 #PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
     text-decoration: none;
 }
@@ -22,47 +19,69 @@ hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i
 
 #PRODUCTS:hover {
     text-decoration: none;
-}
-
-#PRODUCTS:hover {
-    text-decoration: none;
-}
-
-#menu{
-    text-align: center;
-    font-size: 24px;
+    background-color: yellow;
 }
 
 #PRODUCTS {
     display: block;
     margin: auto;
-    width: 100px;    /* result of trial & error. why does this 100 px work?! */
+    width: 100px;     /*result of trial & error. why does this 100 px work?! */
+    text-align: center;
     font-size: 20px;
     color: black;
-
+    
 }
 
-h2 {
-    font-size: 18px;
+/*----------------- CART tab------------------*/
+#CART:link {                    
+    text-decoration: none;
+    color:black;
 }
+#CART:visited {
+    text-decoration: none;
+    color:black;
+}
+
+#CART {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    width: 50px;
+}
+
+#CART:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*-----------------body centent------------------*/
+#menu{
+    text-align: center;
+    font-size: 24px;
+}
+
 
 .product {
     display: block;
     margin: auto;
+    margin-bottom: 10px;
     width: 200px;     /*TA's help. But how does he know 200px??? */
-    padding: 6px;
+    border: solid white 5px;
+    padding: 0;
       /* text-align: center;  https://www.youtube.com/watch?v=JenSL-4cJvE */
+}
+
+.product:hover{
+    background-color: yellow;
+    border: solid yellow 5px;
 }
 
 .product_img{
     width: 100%;     /*TA's help: The image will adjust to fit within its parent element */
     border: 3px solid black;  
-}
-
-
-.product:hover{
-    background-color: yellow;
-    
+    box-sizing: border-box;
 }
 
 
@@ -70,8 +89,29 @@ h2 {
 
 
 
+.GoToDetail:link {
+    text-decoration: none;
+    color:black;
+}
 
+.GoToDetail:visited {
+    text-decoration: none;
+    color:black;
+}
 
+.GoToDetail:hover {
+    text-decoration: none;
+    color:black;
+}
+
+.GoToDetail:active {
+    text-decoration: none;
+    color:black;
+}
+
+.GoToDetail {
+    border: none;
+}
 
 
 
