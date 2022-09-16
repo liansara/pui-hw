@@ -1,30 +1,40 @@
 /*------------------------------ Header Level-------------------------------*/
-#bun-logo {
-    height: 250px;     
-    width: 250px;
+#bun-logo {    
+    width: 400px;
 }
 
 .top-section{
     display:flex;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px;
-    column-gap: 30px;
-    
+}
+
+.top-right{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+.tabs{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
 }
 
 .HEADER{
     font-size: 20px;
     color: black;
+    
 }
 
-.tabs{
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
+.menu{
+    text-align: center;
+    font-size: 28px;
 }
 
-hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag  */
+
+/*
+hr {                     https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag  
     display: flex;
     border: none;
     height: 3px;
@@ -34,14 +44,15 @@ hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i
     padding: 0;
 
 }
+*/
 
-.top-right{
-    
 
-}
+
+
 
 
 /*----------------- PRODUCT tab specific------------------*/
+
 #PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
     text-decoration: none;
 }
@@ -72,17 +83,17 @@ hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i
 }
 
 /*------------------------------body centent-------------------------------*/
-#menu{
-    text-align: center;
-    font-size: 24px;
+.Content{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
 .product {
-    display: block;
+    display: flex;
     margin: auto;
     margin-bottom: 10px;
-    width: 200px;     /*TA's help. But how does he know 200px??? */
+    width: 400px;     /*TA's help. But how does he know 200px??? */
     border: solid white 5px;
     padding: 0;
       /* text-align: center;  https://www.youtube.com/watch?v=JenSL-4cJvE */
@@ -98,8 +109,6 @@ hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i
     border: 3px solid black;  
     box-sizing: border-box;
 }
-
-
 
 
 
