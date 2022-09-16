@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="author" content="Sara Lian">
+  <title>Product Detail Page</title>
+  <link href="css/detailPG_style.css" rel="stylesheet" type="text/css">
+    
+  <body>
+    
+    <a href="./index.html">
+      <img id="bun-logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bakeshop name and its black/white bun logo">  <!--width=20% height="20%"-->
+    </a>
+    
+    <hr id="topLine">
+    
+    <div class="HEADER">
+      <a href="./index.html" id="PRODUCTS">
+        PRODUCTS
+      </a>
+      </div>  
+      
+      <br>
+      <div class="HEADER">
+      <a href="./cart.html" id="CART">
+        CART
+      </a> 
+      </div> 
+      
+    <br>
+    <br>
+      
+    <p id="item_title">Original cinnamon roll<br>
+      </p>
+
+    <div class="product">
+      <img class="product_img" src="assets/products/original-cinnamon-roll.jpg" alt="single glazed cinnamon roll with 2 cinnamon sticks on a dish"> <br>
+    </div>
+
+    <p id="cust"> 
+        Customize our delicious, hand-made cinammon roll to your liking!
+    </p>
+    <br>
+    <br>
+
+    <div class="options">
+        <label for="glazing">Glazing:</label> <br>         <!--https://www.w3schools.com/tags/tag_select.asp-->
+        <select name="glazing" id="glazing">
+            <option value="Keep original">Keep original</option>
+            <option value="Sugar milk">Sugar milk</option>
+            <option value="Vanilla milk">Vanilla milk</option>
+            <option value="Double chocolate">Double chocolate</option>
+        </select>   
+    </div>
+    <br>
+
+    <div class="options">
+        <label for="size">Pack size:</label> <br>
+        <select name="size" id="size">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+        </select>   
+    </div>
+
+    <span id="subtotal">
+        $2.49 &nbsp;&nbsp; <!--how to add space inside. https://stackoverflow.com/questions/61358073/how-to-add-space-inside-a-div-tag-->
+        <input type="button" id="AddtoCart" value="Add to Cart"/>
+    </span>			
+
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+#bun-logo {
+    height: 200px;     /*check px way*/
+    width: 200px;
+}
+
+hr {                     /*https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag  */
+    border: none;
+    height: 3px;
+    background-color: #333
+}
+
+/*----------------- PRODUCT tab------------------*/
+#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+    text-decoration: none;
+}
+#PRODUCTS:visited {
+    text-decoration: none;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+#PRODUCTS {
+    /* display: block;
+    margin: auto;
+    width: 100px;     result of trial & error. why does this 100 px work?! 
+    text-align: center; */
+    font-size: 20px;
+    color: black;
+}
+
+.HEADER {
+    text-align: center;
+}
+/*----------------- CART tab------------------*/
+#CART:link {                    
+    text-decoration: none;
+    color:black;
+}
+#CART:visited {
+    text-decoration: none;
+    color:black;
+}
+
+#CART {
+   /* display: block;
+    margin: auto;
+    width: 50px;
+    text-align: center; */
+    font-size: 17px;
+    color: black;   
+}
+
+#CART:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*-----------------body centent------------------*/
+#menu{
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.product {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 200px;     /*TA's help. But how does he know 200px??? */
+    border: solid white 5px;
+    padding: 0;
+      /* text-align: center;  https://www.youtube.com/watch?v=JenSL-4cJvE */
+}
+
+.product:hover{
+    background-color: yellow;
+    border: solid yellow 5px;
+}
+
+.product_img{
+    width: 100%;     /*TA's help: The image will adjust to fit within its parent element */
+    border: 3px solid black;  
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.GoToDetail:link {
+    text-decoration: none;
+    color:black;
+}
+
+.GoToDetail:visited {
+    text-decoration: none;
+    color:black;
+}
+
+.GoToDetail:hover {
+    text-decoration: none;
+    color:black;
+}
+
+.GoToDetail:active {
+    text-decoration: none;
+    color:black;
+}
+
+.GoToDetail {
+    border: none;
+}
+
+
+
