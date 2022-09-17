@@ -18,19 +18,21 @@
 
 .tabs{
     display: flex;
-    gap: 30px;
+    gap: 100px;
     justify-content: flex-end;
+    padding: 30px;
+    margin-right: 50px;
 }
 
 .HEADER{
-    font-size: 20px;
+    font-size: 26px;
     color: black;
  
     
 }
 
 .menu{
-    font-size: 28px;
+    font-size: 36px;
     padding: 20px;
 }
 
@@ -47,9 +49,6 @@ hr {                     https://stackoverflow.com/questions/4151743/how-can-i-c
 
 }
 */
-
-
-
 
 
 
@@ -88,14 +87,28 @@ hr {                     https://stackoverflow.com/questions/4151743/how-can-i-c
 .Content{
     display: flex;
     flex-wrap: wrap;
+    margin: 70px;
+    gap:100px;
 }
+
+
+.product-name{
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+
+.price{
+    font-size:26px;
+}
+
 
 
 .product {
     display: flex;
     margin: auto;
     margin-bottom: 10px;
-    width: 400px;     /*TA's help. But how does he know 200px??? */
+    width: 350px;     /*TA's help. But how does he know 200px??? */
     border: solid white 5px;
     padding: 0;
       /* text-align: center;  https://www.youtube.com/watch?v=JenSL-4cJvE */
