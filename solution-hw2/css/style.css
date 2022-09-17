@@ -12,7 +12,7 @@
 .top-right{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1;                    /*Important to make the item stretch across the screen */
     justify-content: space-between;
     
 }
@@ -34,25 +34,9 @@
     font-size: 36px;
 }
 
-
-/*
-hr {                     https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag  
-    display: flex;
-    border: none;
-    height: 3px;
-    background-color: #333;
-    align-content: right;
-    width: 80%;
-    padding: 0;
-
-}
-*/
-
-
-
 /*----------------- PRODUCT tab specific------------------*/
 
-#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+#PRODUCTS:link {                   
     text-decoration: none;
 }
 #PRODUCTS:visited {
@@ -82,12 +66,12 @@ hr {                     https://stackoverflow.com/questions/4151743/how-can-i-c
 }
 
 /*------------------------------body centent-------------------------------*/
+
 .Content{
-    display: flex;
-    flex-wrap: wrap;
     margin: 70px;
     gap:100px;
 }
+
 
 
 .product-name{
@@ -103,14 +87,21 @@ hr {                     https://stackoverflow.com/questions/4151743/how-can-i-c
 
 
 .product {
-    display: flex;
-    margin: auto;
     margin-bottom: 10px;
-    width: 350px;     /*TA's help. But how does he know 200px??? */
+    width: 350px;    
     border: solid white 5px;
     padding: 0;
-      /* text-align: center;  https://www.youtube.com/watch?v=JenSL-4cJvE */
 }
+
+
+.row1, .row2{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    
+    
+}
+
 
 .product:hover{
     background-color: yellow;
@@ -118,7 +109,7 @@ hr {                     https://stackoverflow.com/questions/4151743/how-can-i-c
 }
 
 .product_img{
-    width: 100%;     /*TA's help: The image will adjust to fit within its parent element */
+    width: 100%;    
     border: 3px solid black;  
     box-sizing: border-box;
 }
@@ -126,27 +117,27 @@ hr {                     https://stackoverflow.com/questions/4151743/how-can-i-c
 
 
 
-.GoToDetail:link {
+.GoToDetail1:link, .GoToDetail2:link {
     text-decoration: none;
     color:black;
 }
 
-.GoToDetail:visited {
+.GoToDetail1:visited, .GoToDetail2:visited {
     text-decoration: none;
     color:black;
 }
 
-.GoToDetail:hover {
+.GoToDetail1:hover, .GoToDetail2:hover {
     text-decoration: none;
     color:black;
 }
 
-.GoToDetail:active {
+.GoToDetail1:active, .GoToDetail2:active{
     text-decoration: none;
     color:black;
 }
 
-.GoToDetail {
+.GoToDetail1, .GoToDetail2 {
     border: none;
 }
 
