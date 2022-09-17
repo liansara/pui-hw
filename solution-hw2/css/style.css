@@ -11,8 +11,9 @@
 .top-right{
     display: flex;
     flex-direction: column;
-    gap: 150px;
-    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    
 }
 
 .tabs{
@@ -24,12 +25,13 @@
 .HEADER{
     font-size: 20px;
     color: black;
+ 
     
 }
 
 .menu{
-    text-align: center;
     font-size: 28px;
+    padding: 20px;
 }
 
 
