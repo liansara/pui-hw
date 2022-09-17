@@ -1,11 +1,12 @@
 /*------------------------------ Header Level-------------------------------*/
+
 #bun-logo {    
     width: 400px;
+    padding: 40px;
 }
 
 .top-section{
     display:flex;
-    padding: 20px;
 }
 
 .top-right{
@@ -20,20 +21,17 @@
     display: flex;
     gap: 100px;
     justify-content: flex-end;
-    padding: 30px;
-    margin-right: 50px;
+    border-bottom: 4px solid black;
+    padding: 50px 100px;
 }
 
 .HEADER{
     font-size: 26px;
     color: black;
- 
-    
 }
 
 .menu{
     font-size: 36px;
-    padding: 20px;
 }
 
 
