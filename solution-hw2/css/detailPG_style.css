@@ -73,14 +73,15 @@
 .container {
     display: flex;
     justify-content: space-around;
+    gap: 80px;
 }
 
 .product {
-    width:70%;
+    width: 1500px;                 /* is there a better way than using px? */
 }
 
 .product_img {
-    width: 100%;
+    width: 600px;                    /* is there a better way than using px? */
     border: 3px solid black;
 }
 
@@ -89,17 +90,14 @@
     flex-direction: column;
     gap: 18%;
     font-size: 30px;
-
 }
 
 #cust{
-    text-align: left;
-    width:180px;
+    width: 350px;               /* is there a better way than using px? */
 }
 
 .Dropdown{
     display: flex;
-    
     flex-direction: column;
     gap: 20px;
 }
@@ -109,24 +107,31 @@
     width:180px;
 }
 
+select{
+    font-size: 24px;
+}
+
 /* .optionSelection {                 dropdown menu font size?
     font-size: 30px;
 } */
 
 #glazing {
-    width: 160px;
+    width: 360px;
 }
 
 #size {
-    width: 160px; 
+    width: 360px; 
 }
 
 #subtotal {
     width: 180px;
+    font-weight: 200px;
 }
 
 #AddtoCart {
     display: inline;
+    width: 200px;
+    font-size: 28px;
 }
 
 #AddtoCart:hover{

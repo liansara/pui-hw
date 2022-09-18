@@ -71,29 +71,33 @@
     margin-left: 40%;
 } 
 
+.Cart_content{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
 .product {
     display: flex;
-    width: 250px;    
-    gap: 30px;
-    justify-content: space-between;
+    gap: 0 30px;
+    padding: 0 0 20px 0;
 }
 
-
-
 .IMAGE_block{
+    width: 17%;
 }
 
 .text_block{
-    flex: 2;
+    width:350px;
+    font-size: 25px;
 } 
 
 .price_block{
-
+    font-size: 25px;
 }  
 
 .Cart_content{
-    border-bottom: 4px solid black;
+    
 }
 
 #Checkout_block{
@@ -108,16 +112,10 @@
 }
 
 .REMOVE {
-    font-size: 10px;
+    font-size: 12px;
     text-decoration: underline; /*https://www.w3schools.com/cssref/pr_text_text-decoration.asp*/
+    font-weight: bold;
 }
-
-#Total_block {
-    display: flex;
-    justify-content: flex-end;
-}
-
-
 
 #Checkout {
     border: 2px solid black;   /*  https://www.w3schools.com/howto/howto_css_outline_buttons.asp  */
