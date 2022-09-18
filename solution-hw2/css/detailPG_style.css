@@ -1,20 +1,47 @@
-#bun-logo {
-    height: 200px;     
-    width: 200px;
+/*------------------------------ Header Level-------------------------------*/
+
+#bun-logo {    
+    width: 400px;
+    padding: 40px;
 }
 
-#topLine {
-    border: none;
-    height: 3px;
-    background-color: #333
+.top-section{
+    display:flex;
 }
 
-/*----------------- PRODUCT tab------------------*/
-#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+.top-right{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;                    /*Important to make the item stretch across the screen */
+    justify-content: space-between;
+    
+}
+
+.tabs{
+    display: flex;
+    gap: 100px;
+    justify-content: flex-end;
+    border-bottom: 4px solid black;
+    padding: 50px 100px;
+}
+
+.HEADER{
+    font-size: 26px;
+    color: black;
+}
+
+.menu{
+    font-size: 36px;
+}
+
+/*----------------- PRODUCT tab specific------------------*/
+
+#PRODUCTS:link {                   
     text-decoration: none;
 }
 #PRODUCTS:visited {
     text-decoration: none;
+    color:black;
 }
 
 #PRODUCTS:hover {
@@ -22,19 +49,7 @@
     background-color: yellow;
 }
 
-#PRODUCTS {
-    /* display: block;
-    margin: auto;
-    width: 100px;     result of trial & error. why does this 100 px work?! 
-    text-align: center; */
-    font-size: 20px;
-    color: black;
-}
-
-.HEADER {
-    text-align: center;
-}
-/*----------------- CART tab------------------*/
+/*----------------- CART tab specific------------------*/
 #CART:link {                    
     text-decoration: none;
     color:black;
@@ -44,21 +59,18 @@
     color:black;
 }
 
-#CART {
-    /* display: block;
-     margin: auto;
-     width: 50px;
-     text-align: center; */
-     font-size: 17px;
-     color: black;   
- }
 
 #CART:hover {
     text-decoration: none;
     background-color: yellow;
 }
 
-/*-----------------body centent------------------*/
+/*------------------------------body centent-------------------------------*/
+
+.Content{
+    margin: 70px;
+    gap:100px;
+}
 
 
 #item_title{
