@@ -7,59 +7,73 @@
     
   <body>
 
-
-    <a href="index.html">
-      <img id="bun-logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bakeshop name and its black/white bun logo">  <!--width=20% height="20%"-->
+<!--------------------------------- Header level --------------------------------->
+<div class="top-section">
+  <a href="./index.html">
+    <img id="bun-logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bakeshop name and its black/white bun logo">  <!--width=20% height="20%"-->
     </a>
 
-    <hr id="topLine">
-    
-    <div class="HEADER">
-      <a href="./index.html" id="PRODUCTS">
-        PRODUCTS
-      </a>
-      </div>  
+    <div class="top-right">
+    <div class="tabs">
       
-      <br>
-      <div class="HEADER">
-      <a href="./cart.html" id="CART">
-        CART
-      </a> 
+        <a class="HEADER" href="./index.html" id="PRODUCTS">
+            PRODUCTS
+          </a>
+    
+        <a class="HEADER" href="./cart.html" id="CART">
+            CART
+          </a> 
+       
       </div>
+
+    <div class="menu">Shopping cart </div>
+  </div>
+  
+    </div>
+  <!--------------------------------- Content level --------------------------------->
+  <div class="content">
     
-    <br>
-    <br>
-      
-    <p id="Title">Shopping Cart <br>
-      </p>
 
     <div class="product">
-      <img class="product_img" src="assets/products/original-cinnamon-roll.jpg" alt="single glazed cinnamon roll with 2 cinnamon sticks on a dish"> <br>
-      <a class="REMOVE">Remove</a>
-      <p>Original Cinnamon Roll <br> 
+      <div class="IMAGE_block">
+        <img class="product_img" src="assets/products/original-cinnamon-roll.jpg" alt="single glazed cinnamon roll with 2 cinnamon sticks on a dish"> <br>
+        <a class="REMOVE">Remove</a>
+        </div>
+      <div class="text_block">
+        <p>Original Cinnamon Roll <br> 
         Glazing: Keep original<br>
         Pack Size: 1</p>
-      <p class="SUBtotal">$ 2.49</p>  
+        </div>
+      <div class="price_block">
+        <p class="SUBtotal">$ 2.49</p>  
+        </div>
     </div>
 
     <div class="product">
+      <div class="IMAGE_block">
         <img class="product_img" src="assets/products/double-chocolate-cinnamon-roll.jpg" alt=""> <br>
         <a class="REMOVE">Remove</a>
+        </div>
+      <div class="text_block">
         <p>Double-chocolate cinnamon roll<br>
             Glazing: Sugar milk<br>
             Pack Size: 6</p>
+        </div>
+      <div class="price_block"> 
         <p class="SUBtotal">$ 27.45</p>  
-
+        </div> 
       </div>
-
-
-    <hr id="subtotal_line">
+     
     
     <div id="Total_block">
-        <div id="Total_amount">Total: $ 29.94 <br></div>
-        <input type="button" id="Checkout" value="Checkout"/>
+        <div class="SUBTOTAL">Total</div>
+        <div class="SUBTOTAL">$ 29.94</div>
     </div>
 
+    <div>
+      <input type="button" id="Checkout" value="Checkout"/>
+      </div>
   
+  </div>
   </body>
 </html>

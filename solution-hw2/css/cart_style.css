@@ -1,21 +1,46 @@
-#bun-logo {
-    height: 200px;     
-    width: 200px;
+/*------------------------------ Header Level-------------------------------*/
+
+#bun-logo {    
+    width: 400px;
+    padding: 40px;
 }
 
-#topLine {
-    border: none;
-    height: 3px;
-    background-color: #333
+.top-section{
+    display:flex;
 }
 
+.top-right{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;                    /*Important to make the item stretch across the screen */
+}
 
-/*----------------- PRODUCT tab------------------*/
-#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+.tabs{
+    display: flex;
+    gap: 100px;
+    justify-content: flex-end;
+    border-bottom: 4px solid black;
+    padding: 50px 100px;
+}
+
+.HEADER{
+    font-size: 26px;
+    color: black;
+}
+
+.menu{
+    font-size: 36px;
+    margin-top: 10%;
+}
+
+/*----------------- PRODUCT tab specific------------------*/
+
+#PRODUCTS:link {                   
     text-decoration: none;
 }
 #PRODUCTS:visited {
     text-decoration: none;
+    color:black;
 }
 
 #PRODUCTS:hover {
@@ -23,28 +48,7 @@
     background-color: yellow;
 }
 
-#PRODUCTS {
-    /* display: block;
-    margin: auto;
-    width: 100px;     result of trial & error. why does this 100 px work?! 
-    text-align: center; */
-    font-size: 20px;
-    color: black;
-}
-
-.HEADER {
-    text-align: center;
-}
-/*----------------- CART tab------------------*/
-#CART {
-    /* display: block;
-     margin: auto;
-     width: 50px;
-     text-align: center; */
-     font-size: 17px;
-     color: black;   
- }
-
+/*----------------- CART tab specific------------------*/
 #CART:link {                    
     text-decoration: none;
     color:black;
@@ -54,25 +58,41 @@
     color:black;
 }
 
+
 #CART:hover {
     text-decoration: none;
     background-color: yellow;
 }
 
-/*-----------------body centent------------------*/
-#Title {
-    text-align: center;
-    font-size: 24px;
-}
-
+/*------------------------------body centent-------------------------------*/
+.content{
+    display: flex;
+    flex-direction: column;
+} 
 
 .product {
-    display: block;
+    display: flex;
     margin: auto;
     width: 250px;    
-    padding: 6px;
-    text-align: center;
+    gap: 30px;
+    justify-content: space-between;
+    
 }
+
+
+
+.IMAGE_block{
+}
+
+.text_block{
+    flex: 2;
+} 
+
+.price_block{
+
+}  
+
+
 
 .product_img{
     width: 100%;   
@@ -90,7 +110,6 @@
 }
 
 #subtotal_line {
-    display: block;
     margin-left: 20%;
     margin-right: 20%;
     border: none;
@@ -100,7 +119,6 @@
 }
 
 #Total_block {
-    display: block;
     margin: auto;
     width: 133px;
     text-align: center
@@ -112,7 +130,6 @@
 }
 
 #Checkout {
-    width: 100%;
     border: 2px solid black;   /*  https://www.w3schools.com/howto/howto_css_outline_buttons.asp  */
     padding: 5px;
     font-weight: bold;    /*  https://www.w3schools.com/cssref/pr_font_weight.asp  */
