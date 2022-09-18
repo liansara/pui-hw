@@ -85,12 +85,24 @@
 }
 
 .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18%;
     font-size: 30px;
+
 }
 
 #cust{
     text-align: left;
     width:180px;
+}
+
+.Dropdown{
+    display: flex;
+    
+    flex-direction: column;
+    gap: 20px;
 }
 
 .options {
