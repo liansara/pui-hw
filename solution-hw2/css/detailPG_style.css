@@ -72,7 +72,7 @@
 
 .container {
     display: flex;
-    gap: 10%;
+    justify-content: space-around;
 }
 
 .product {
@@ -87,7 +87,6 @@
 .details {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 18%;
     font-size: 30px;
 
