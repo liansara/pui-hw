@@ -96,15 +96,14 @@
     font-size: 25px;
 }  
 
-.Cart_content{
-    
-}
-
 #Checkout_block{
-    display: flex;
     justify-content: flex-end;
+    margin-right: 15%;
 }
 
+#Checkout{
+    width:130px;
+}
 
 .product_img{
     width: 100%;   
@@ -117,19 +116,15 @@
     font-weight: bold;
 }
 
-#Checkout {
-    border: 2px solid black;   /*  https://www.w3schools.com/howto/howto_css_outline_buttons.asp  */
-    padding: 5px;
-    font-weight: bold;    /*  https://www.w3schools.com/cssref/pr_font_weight.asp  */
-}
-
-
 #Checkout:hover{
     background-color: yellow;
 }
 
 
-
+#SUBTOTAL{
+    border-top: 4px solid black;
+    padding: 20px 0 40px 0;
+}
 
 
 #PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
