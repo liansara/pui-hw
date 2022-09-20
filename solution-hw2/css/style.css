@@ -126,7 +126,6 @@
 
 .GoToDetail1:visited,
 .GoToDetail2:visited {
-    /* text-decoration: none; */
     color: black;
 }
 
@@ -153,6 +152,7 @@
     text-decoration: none;
     color: black;
 }
+
 
 .GoToDetail1,
 .GoToDetail2 {
