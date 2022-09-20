@@ -1,21 +1,22 @@
 /*------------------------------ Header Level-------------------------------*/
 
-#bun-logo {    
+#bun-logo {
     width: 400px;
     padding: 40px;
 }
 
-.top-section{
-    display:flex;
+.top-section {
+    display: flex;
 }
 
-.top-right{
+.top-right {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;                    /*Important to make the item stretch across the screen */
+    flex-grow: 1;
+    /*Important to make the item stretch across the screen */
 }
 
-.tabs{
+.tabs {
     display: flex;
     gap: 100px;
     justify-content: flex-end;
@@ -23,24 +24,25 @@
     padding: 50px 100px;
 }
 
-.HEADER{
+.HEADER {
     font-size: 26px;
     color: black;
 }
 
-.menu{
+.menu {
     font-size: 36px;
     margin-top: 10%;
 }
 
 /*----------------- PRODUCT tab specific------------------*/
 
-#PRODUCTS:link {                   
+#PRODUCTS:link {
     text-decoration: none;
 }
+
 #PRODUCTS:visited {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 #PRODUCTS:hover {
@@ -49,13 +51,14 @@
 }
 
 /*----------------- CART tab specific------------------*/
-#CART:link {                    
+#CART:link {
     text-decoration: none;
-    color:black;
+    color: black;
 }
+
 #CART:visited {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 
@@ -66,7 +69,7 @@
 
 /*------------------------------body centent-------------------------------*/
 
-.content{
+.content {
     margin: 10%;
 }
 
@@ -77,11 +80,13 @@
 }
 
 .product {
-    width: 1500px;                 /* is there a better way than using px? */
+    width: 1500px;
+    /* is there a better way than using px? */
 }
 
 .product_img {
-    width: 600px;                    /* is there a better way than using px? */
+    width: 600px;
+    /* is there a better way than using px? */
     border: 3px solid black;
 }
 
@@ -92,11 +97,12 @@
     font-size: 30px;
 }
 
-#cust{
-    width: 350px;               /* is there a better way than using px? */
+#cust {
+    width: 350px;
+    /* is there a better way than using px? */
 }
 
-.Dropdown{
+.Dropdown {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -104,10 +110,10 @@
 
 .options {
     display: block;
-    width:180px;
+    width: 180px;
 }
 
-select{
+select {
     font-size: 24px;
 }
 
@@ -120,7 +126,7 @@ select{
 }
 
 #size {
-    width: 360px; 
+    width: 360px;
 }
 
 #subtotal {
@@ -128,20 +134,28 @@ select{
     font-weight: 200px;
 }
 
+.AddtoCart_box {
+    text-align: right;
+}
+
 #AddtoCart {
-    display: inline;
     width: 200px;
     font-size: 28px;
 }
 
-#AddtoCart:hover{
+
+
+#AddtoCart:hover {
     background-color: yellow;
+    font-weight: bold;
 }
 
 
-#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+#PRODUCTS:link {
+    /* https://www.w3schools.com/css/css_link.asp  */
     text-decoration: none;
 }
+
 #PRODUCTS:visited {
     text-decoration: none;
 }
@@ -154,5 +168,8 @@ select{
     text-decoration: none;
 }
 
+.HEADER:hover {
+    font-weight: bold;
+}
 
 /* @media (min-width: 412px); */

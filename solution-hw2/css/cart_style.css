@@ -1,21 +1,22 @@
 /*------------------------------ Header Level-------------------------------*/
 
-#bun-logo {    
+#bun-logo {
     width: 400px;
     padding: 40px;
 }
 
-.top-section{
-    display:flex;
+.top-section {
+    display: flex;
 }
 
-.top-right{
+.top-right {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;                    /*Important to make the item stretch across the screen */
+    flex-grow: 1;
+    /*Important to make the item stretch across the screen */
 }
 
-.tabs{
+.tabs {
     display: flex;
     gap: 100px;
     justify-content: flex-end;
@@ -23,24 +24,25 @@
     padding: 50px 100px;
 }
 
-.HEADER{
+.HEADER {
     font-size: 26px;
     color: black;
 }
 
-.menu{
+.menu {
     font-size: 36px;
     margin-top: 10%;
 }
 
 /*----------------- PRODUCT tab specific------------------*/
 
-#PRODUCTS:link {                   
+#PRODUCTS:link {
     text-decoration: none;
 }
+
 #PRODUCTS:visited {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 #PRODUCTS:hover {
@@ -49,13 +51,14 @@
 }
 
 /*----------------- CART tab specific------------------*/
-#CART:link {                    
+#CART:link {
     text-decoration: none;
-    color:black;
+    color: black;
 }
+
 #CART:visited {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 
@@ -65,16 +68,17 @@
 }
 
 /*------------------------------body centent-------------------------------*/
-.content{
+.content {
     display: flex;
     flex-direction: column;
     margin-left: 40%;
-} 
+}
 
-.Cart_content{
+.Cart_content {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding-top: 50px;
 }
 
 .product {
@@ -83,53 +87,59 @@
     padding: 0 0 20px 0;
 }
 
-.IMAGE_block{
+.IMAGE_block {
     width: 17%;
 }
 
-.text_block{
-    width:350px;
+.text_block {
+    width: 350px;
     font-size: 25px;
-} 
+}
 
-.price_block{
+.price_block {
     font-size: 25px;
-}  
+}
 
-#Checkout_block{
+#Checkout_block {
     justify-content: flex-end;
     margin-right: 15%;
 }
 
-#Checkout{
-    width:130px;
+#Checkout {
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 20px;
+
 }
 
-.product_img{
-    width: 100%;   
-    border: 3px solid black;  
+.product_img {
+    width: 100%;
+    border: 3px solid black;
 }
 
 .REMOVE {
     font-size: 12px;
-    text-decoration: underline; /*https://www.w3schools.com/cssref/pr_text_text-decoration.asp*/
+    text-decoration: underline;
+    /*https://www.w3schools.com/cssref/pr_text_text-decoration.asp*/
     font-weight: bold;
 }
 
-#Checkout:hover{
+#Checkout:hover {
     background-color: yellow;
 }
 
 
-#SUBTOTAL{
+#SUBTOTAL {
     border-top: 4px solid black;
     padding: 20px 0 40px 0;
 }
 
 
-#PRODUCTS:link {                    /* https://www.w3schools.com/css/css_link.asp  */
+#PRODUCTS:link {
+    /* https://www.w3schools.com/css/css_link.asp  */
     text-decoration: none;
 }
+
 #PRODUCTS:visited {
     text-decoration: none;
 }
@@ -142,4 +152,10 @@
     text-decoration: none;
 }
 
+.HEADER:hover {
+    font-weight: bold;
+}
 
+input {
+    font-weight: bold;
+}
