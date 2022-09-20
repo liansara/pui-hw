@@ -83,7 +83,6 @@
 
 .product_img {
     width: 650px;
-
     /* is there a better way than using px? */
     border: 3px solid black;
 }
@@ -107,18 +106,9 @@
     gap: 20px;
 }
 
-/* .options {
-    display: block;
-    /* width: 180px; 
-} */
-
 select {
     font-size: 24px;
 }
-
-/* .optionSelection {                 dropdown menu font size?
-    font-size: 30px;
-} */
 
 #glazing {
     width: 100%;
@@ -126,11 +116,6 @@ select {
 
 #size {
     width: 100%;
-}
-
-#subtotal {
-    /* width: 180px; */
-    /* font-weight: 200px; */
 }
 
 .AddtoCart_box {
@@ -151,7 +136,6 @@ select {
 
 
 #PRODUCTS:link {
-    /* https://www.w3schools.com/css/css_link.asp  */
     text-decoration: none;
 }
 
