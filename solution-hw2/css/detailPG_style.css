@@ -18,10 +18,10 @@
 
 .tabs {
     display: flex;
-    gap: 100px;
+    gap: 50px;
     justify-content: flex-end;
     border-bottom: 4px solid black;
-    padding: 50px 100px;
+    padding: 50px 120px;
 }
 
 .HEADER {
@@ -70,22 +70,20 @@
 /*------------------------------body centent-------------------------------*/
 
 .content {
-    margin: 10%;
+    padding: 50px 50px;
 }
 
 .container {
     display: flex;
     justify-content: space-around;
-    gap: 80px;
-}
-
-.product {
-    width: 1500px;
-    /* is there a better way than using px? */
+    gap: 50px;
+    margin-left: 120px;
+    margin-right: 60px;
 }
 
 .product_img {
-    width: 600px;
+    width: 650px;
+
     /* is there a better way than using px? */
     border: 3px solid black;
 }
@@ -94,7 +92,8 @@
     display: flex;
     flex-direction: column;
     gap: 18%;
-    font-size: 30px;
+    font-size: 29px;
+    padding: 20px 15px;
 }
 
 #cust {
@@ -108,10 +107,10 @@
     gap: 20px;
 }
 
-.options {
+/* .options {
     display: block;
-    width: 180px;
-}
+    /* width: 180px; 
+} */
 
 select {
     font-size: 24px;
@@ -122,16 +121,16 @@ select {
 } */
 
 #glazing {
-    width: 360px;
+    width: 100%;
 }
 
 #size {
-    width: 360px;
+    width: 100%;
 }
 
 #subtotal {
-    width: 180px;
-    font-weight: 200px;
+    /* width: 180px; */
+    /* font-weight: 200px; */
 }
 
 .AddtoCart_box {
@@ -140,9 +139,9 @@ select {
 
 #AddtoCart {
     width: 200px;
-    font-size: 28px;
+    font-size: 25px;
+    padding: 12px 20px;
 }
-
 
 
 #AddtoCart:hover {

@@ -18,7 +18,7 @@
 
 .tabs {
     display: flex;
-    gap: 100px;
+    gap: 50px;
     justify-content: flex-end;
     border-bottom: 4px solid black;
     padding: 50px 100px;
