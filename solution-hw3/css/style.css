@@ -1,0 +1,160 @@
+/*------------------------------ Header Level-------------------------------*/
+
+#bun-logo {
+    width: 400px;
+    padding: 40px;
+}
+
+.top-section {
+    display: flex;
+}
+
+.top-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /*Important to make the item stretch across the screen */
+}
+
+.tabs {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+    border-bottom: 4px solid black;
+    padding: 50px 100px;
+}
+
+.HEADER {
+    font-size: 26px;
+    color: black;
+}
+
+.menu {
+    font-size: 36px;
+    margin-top: 10%;
+}
+
+/*----------------- PRODUCT tab specific------------------*/
+
+#PRODUCTS:link {
+    text-decoration: none;
+}
+
+#PRODUCTS:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*----------------- CART tab specific------------------*/
+#CART:link {
+    text-decoration: none;
+    color: black;
+}
+
+#CART:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+#CART:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*------------------------------body centent-------------------------------*/
+
+.Content {
+    margin: 70px;
+    gap: 100px;
+}
+
+
+
+.product-name {
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+
+.price {
+    font-size: 26px;
+}
+
+
+
+.product {
+    margin-bottom: 10px;
+    width: 350px;
+    border: solid white 5px;
+    padding: 20px;
+}
+
+
+.row1,
+.row2 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+
+
+}
+
+
+.product:hover {
+    background-color: yellow;
+    border: solid yellow 5px;
+}
+
+.product_img {
+    width: 100%;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+
+
+.GoToDetail1:link,
+.GoToDetail2:link {
+    text-decoration: none;
+    color: black;
+}
+
+.GoToDetail1:visited,
+.GoToDetail2:visited {
+    color: black;
+}
+
+.GoToDetail1:hover,
+.GoToDetail2:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.GoToDetail1:hover>.product-name {
+    font-weight: bold;
+}
+
+.GoToDetail2:hover>.product-name {
+    font-weight: bold;
+}
+
+.HEADER:hover {
+    font-weight: bold;
+}
+
+.GoToDetail1:active,
+.GoToDetail2:active {
+    text-decoration: none;
+    color: black;
+}
+
+
+.GoToDetail1,
+.GoToDetail2 {
+    border: none;
+}

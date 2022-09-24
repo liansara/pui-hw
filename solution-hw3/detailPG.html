@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="author" content="Sara Lian">
+<title>Product Detail Page</title>
+<link href="css/detailPG_style.css" rel="stylesheet" type="text/css">
+
+<body>
+
+
+  <!--------------------------------- Header level --------------------------------->
+  <div class="top-section">
+    <a href="./index.html">
+      <img id="bun-logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bakeshop name and its black/white bun logo">
+      <!--width=20% height="20%"-->
+    </a>
+
+    <div class="top-right">
+      <div class="tabs">
+
+        <a class="HEADER" href="./index.html" id="PRODUCTS">
+          PRODUCTS
+        </a>
+
+        <a class="HEADER" href="./cart.html" id="CART">
+          CART
+        </a>
+
+      </div>
+
+      <div class="menu">Original cinnamon roll
+      </div>
+    </div>
+
+  </div>
+  <!--------------------------------- Content level --------------------------------->
+
+  <div class="content">
+    <div class="container">
+
+      <div class="product">
+        <!-- child1 -->
+        <img class="product_img" src="assets/products/original-cinnamon-roll.jpg"
+          alt="single glazed cinnamon roll with 2 cinnamon sticks on a dish"> <br>
+      </div>
+
+      <div class="details">
+        <!-- child2 -->
+        <div id="cust">
+          Customize our delicious, hand-made cinammon roll to your liking!
+        </div>
+
+        <div class="Dropdown">
+          <div class="options">
+            <label for="glazing">Glazing:</label> <br>
+            <select name="glazing" id="glazing">
+              <option value="Keep original" class="optionSelection">Keep original</option>
+              <option value="Sugar milk" class="optionSelection">Sugar milk</option>
+              <option value="Vanilla milk" class="optionSelection">Vanilla milk</option>
+              <option value="Double chocolate" class="optionSelection">Double chocolate</option>
+            </select>
+          </div>
+
+          <div class="options">
+            <label for="size">Pack size:</label> <br>
+            <select name="size" id="size">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="AddtoCart_box">
+          <span id="subtotal">
+            $2.49 &nbsp;&nbsp;
+            <!--how to add space inside. https://stackoverflow.com/questions/61358073/how-to-add-space-inside-a-div-tag-->
+            <input type="button" id="AddtoCart" value="Add to Cart" />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
