@@ -1,38 +1,4 @@
-/* psuedo code:
-
-
-1. Function: (basePrice + glazingPrice) * packPrice
-2. grab glazing and pack options from user
-3. Function: update selected options
-4. Functions:  change the glazing $ & and the pack selection to calculate the updated price, 
-and display the updated price
-
-*/
-
-/* -----------------------------Set up the class---------------------------- */
-class Bun {
-    constructor(image, productName, basePrice) {
-        this.image = image;  //???
-        this.productName = productName;  //this is for HW4?
-        this.basePrice = basePrice;
-    }
-
-    addToCartPrice() {       // calculate the price according to glazing and pack options (aka subtotal)
-        return (this.basePrice + glazingPrice) * packSize;
-    }
-
-    displaySubtotal() {     // display the subtotal on the detail Page
-        return "$" // + ??????
-    }
-}
-let originalRoll = new Bun("product_img", "original Cinnamon roll", 2.49);
-let appleRoll = new Bun("product_img", "Apple cinnamon roll", 3.49);
-let RaisinRoll = new Bun("product_img", "Raisin cinnamon roll", 2.99);
-let walnutRoll = new Bun("product_img", "Walnut cinnamon roll", 3.49);
-let doubleChocoRoll = new Bun("product_img", "Double chocolate roll", 3.99);
-let strawberryRoll = new Bun("product_img", "Strawberry cinnamon roll", 3.99);
-
-/* -----------------------------Set up all the options in arrays------------------ */
+/* -----------------------------Set up all the options in arrays---------------------------------- */
 let allGlazingOptions = {
     "Keep original": 0,
     "Sugar milk": 0,
@@ -40,61 +6,57 @@ let allGlazingOptions = {
     "Double chocolate": 1.5,
 }
 
-let allPackSizes = {
-    1: 1,
-    3: 3,
-    5: 5,
-    10: 10,
+let allPackSizes = [1, 3, 6, 12]
+
+selectedGlazingOption = document.querySelector("#glazingOptions");
+for (bunNames in allGlazingOptions) {                                 // loop to add glazing options 
+    var opt = document.createElement('option');                       // replace the option tags in html with these code. source: https://www.w3schools.com/jsref/met_document_createelement.asp
+    opt.value = bunNames;
+    opt.innerText = bunNames;
+    selectedGlazingOption.appendChild(opt);
 }
 
-/* -----------------------------Options Selections ---------------------------- */
-// Without using the option tags on HTML, how do I use JS to feed dropdown options on html???? 
-
-
-function onSelectGlazingChange() {
-    selectedGlazingOption = document.querySelector("#glazingOptions").value;   //store what user selected for glazing option
-    glazingPrice = allGlazingOptions[selectedGlazingOption]              //retrieve the glazing option price
-
-    document.getElementByID("glazingOptions").innerHTML =   ???         //display the glazing option on screen???
+selectedPackSize = document.querySelector("#size");
+for (bunPack in allPackSizes) {                                         // loop to add pack options
+    var opt = document.createElement('option');                         // replace the option tags in html with these code
+    opt.value = allPackSizes[bunPack];
+    opt.innerText = allPackSizes[bunPack];
+    selectedPackSize.appendChild(opt);
 }
 
-function onSelectPackChange() {
-    selectedPackOption = document.querySelector("#size");   //store what user selected for pack option
-    packSize = allPackSizes[selectedPackOption]
-    document.getElementByID("size").innerHTML =    ???    //display the pack option on screen???
+/* -------------------------------------Set up the functions---------------------------------- */
+function calculatePrice() {
+    selectedGlazingOption = document.querySelector("#glazingOptions").value;   //gets selected value from 1st dropdown
+    selectedPackSize = document.querySelector("#size").value;                  //gets selected value from 2nd dropdown
+
+    let glazingPrice = allGlazingOptions[selectedGlazingOption];               //gets the glazing price from the dictionary
+    let finalPrice = (2.49 + glazingPrice) * selectedPackSize;                 //calculates the math
+    displayPrice(finalPrice);
+}
+
+function displayPrice(finalPrice) {
+    let displayPrice = document.querySelector(".AddtoCart_box p");             //get the element we want to change
+    displayPrice.innerText = "$" + Math.round(finalPrice * 100) / 100;         //change the element in html & rounded to 2 digits
 }
 
 
 
+// --------------------------------------converting HTML to JS (notes to self) -------------------------------------------------
+//-------TO CREATE AND ADD CHILDREN TO DROPDOWN------
+
+//1. make this element <option value="Keep original">Keep original</option>
+// var opt = document.createElement('option'); //opt = <option></option>
+// opt.value = "Keep original"; //opt = <option value = "Keep original"></option>
+// opt.innerText = "Keep original"; //opt = <option value="Keep original">Keep original</option>
+
+//2. find the dropdown
+// selectedGlazingOption = document.querySelector("#glazingOptions");
+// console.log(selectedGlazingOption);
 
 
-/* ------- discarded code---------- TA said to use dictionary
-allGlazingOptions = ["Keep original", "Sugar milk", "Vanilla milk", "Double chocolate"];
-allPackOptions = [1, 3, 5, 10]
-*/
+//3. add that element
+// selectedGlazingOption.appendChild(opt);
+//-----------------------------------------------
 
-/*
-    function glazingChange(glazingOptions) {
-        if (glazingOptions === "Keep original" || "Sugar milk") {         citation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR
-            glazingPrice = 0
-        } else if (glazingOptions === "Vanilla milk") {
-            glazingPrice = 0.50
-        } else {
-            glazingPrice = 1.5
-        }
-    }
-    
-function packChange(packOptions) {
-    if (packOptions === 1) {
-        packSize = 1
-    } else if (packOptions === 3) {
-        packSize = 3
-    } else if (packOptions === 5) {
-        packSize = 5
-    } else if (packOptions === 10) {
-        packSize = 10
-    }
-}
-*/
 
 

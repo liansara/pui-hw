@@ -6,7 +6,7 @@
   <meta name="author" content="Sara Lian">
   <title>Product Detail Page</title>
   <link href="css/detailPG_style.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="Javascript/price.js"></script>
+  <script type="text/javascript" src="Javascript/price.js" defer></script>
 </head>
 
 <body>
@@ -56,41 +56,22 @@
 
         <div class="Dropdown">
           <div class="options">
-            <select id="glazingOptions" onchange="glazingChange(this)">
-
-              <!-- options populated dynamically -->
-
-            </select>
-
-            <!--
-            <label for="glazing">Glazing:</label> <br>
-            <select name="glazing" id="glazing" onchange="glazingChange(this)">
-              <option value="Keep original" class="optionSelection">Keep original</option>
-              <option value="Sugar milk" class="optionSelection">Sugar milk</option>
-              <option value="Vanilla milk" class="optionSelection">Vanilla milk</option>
-              <option value="Double chocolate" class="optionSelection">Double chocolate</option>
-            </select>
-          -->
+            <label id="glazing">Glazing:</label> <br>
+            <select id="glazingOptions" onchange="calculatePrice()"> </select>
 
           </div>
 
           <div class="options">
-            <label for="size">Pack size:</label> <br>
-            <select name="size" id="size">
-              <option value="1">1</option>
-              <option value="3">3</option>
-              <option value="6">6</option>
-              <option value="12">12</option>
-            </select>
+            <label>Pack size:</label> <br>
+            <select id="size" onchange="calculatePrice()"></select>
           </div>
         </div>
 
         <div class="AddtoCart_box">
-          <span id="subtotal">
-            $2.49 &nbsp;&nbsp;
-            <!--how to add space inside. https://stackoverflow.com/questions/61358073/how-to-add-space-inside-a-div-tag-->
-            <input type="button" id="AddtoCart" value="Add to Cart" />
-          </span>
+
+          <p>$2.49</p>
+          <input type="button" id="AddtoCart" value="Add to Cart" />
+
         </div>
       </div>
     </div>

@@ -110,7 +110,7 @@ select {
     font-size: 24px;
 }
 
-#glazing {
+#glazingOptions {
     width: 100%;
 }
 
@@ -121,6 +121,13 @@ select {
 .AddtoCart_box {
     text-align: right;
 }
+
+.AddtoCart_box p {
+    display: inline;
+    margin-right: 30px;
+}
+
+
 
 #AddtoCart {
     width: 200px;
