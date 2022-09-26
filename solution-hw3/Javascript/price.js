@@ -6,7 +6,12 @@ let allGlazingOptions = {
     "Double chocolate": 1.5,
 }
 
-let allPackSizes = [1, 3, 6, 12]
+let allPackSizes = {
+    1: 1,
+    3: 3,
+    6: 5,
+    12: 10,
+}
 
 selectedGlazingOption = document.querySelector("#glazingOptions");
 for (bunNames in allGlazingOptions) {                                 // loop to add glazing options 
@@ -19,8 +24,8 @@ for (bunNames in allGlazingOptions) {                                 // loop to
 selectedPackSize = document.querySelector("#size");
 for (bunPack in allPackSizes) {                                         // loop to add pack options
     var opt = document.createElement('option');                         // replace the option tags in html with these code
-    opt.value = allPackSizes[bunPack];
-    opt.innerText = allPackSizes[bunPack];
+    opt.value = bunPack;
+    opt.innerText = bunPack;
     selectedPackSize.appendChild(opt);
 }
 
@@ -28,15 +33,16 @@ for (bunPack in allPackSizes) {                                         // loop 
 function calculatePrice() {
     selectedGlazingOption = document.querySelector("#glazingOptions").value;   //gets selected value from 1st dropdown
     selectedPackSize = document.querySelector("#size").value;                  //gets selected value from 2nd dropdown
-
     let glazingPrice = allGlazingOptions[selectedGlazingOption];               //gets the glazing price from the dictionary
-    let finalPrice = (2.49 + glazingPrice) * selectedPackSize;                 //calculates the math
+    let packSizePrice = allPackSizes[selectedPackSize];                        //gets the pack price adaption from the dictionary
+    let finalPrice = (2.49 + glazingPrice) * packSizePrice;                   //calculates the math
     displayPrice(finalPrice);
 }
 
 function displayPrice(finalPrice) {
     let displayPrice = document.querySelector(".AddtoCart_box p");             //get the element we want to change
-    displayPrice.innerText = "$" + Math.round(finalPrice * 100) / 100;         //change the element in html & rounded to 2 digits
+    let roundPrice = finalPrice.toFixed(2);                                     // make sure it displays 2 decimals
+    displayPrice.innerText = "$" + roundPrice;                                 //change the element in html & show $ sign 
 }
 
 
