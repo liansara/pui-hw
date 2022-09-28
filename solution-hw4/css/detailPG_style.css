@@ -1,0 +1,165 @@
+/*------------------------------ Header Level-------------------------------*/
+
+#bun-logo {
+    width: 400px;
+    padding: 40px;
+}
+
+.top-section {
+    display: flex;
+}
+
+.top-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /*Important to make the item stretch across the screen */
+}
+
+.tabs {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+    border-bottom: 4px solid black;
+    padding: 50px 120px;
+}
+
+.HEADER {
+    font-size: 26px;
+    color: black;
+}
+
+.menu {
+    font-size: 36px;
+    margin-top: 10%;
+}
+
+/*----------------- PRODUCT tab specific------------------*/
+
+#PRODUCTS:link {
+    text-decoration: none;
+}
+
+#PRODUCTS:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*----------------- CART tab specific------------------*/
+#CART:link {
+    text-decoration: none;
+    color: black;
+}
+
+#CART:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+#CART:hover {
+    text-decoration: none;
+    background-color: yellow;
+}
+
+/*------------------------------body centent-------------------------------*/
+
+.content {
+    padding: 50px 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin-left: 120px;
+    margin-right: 60px;
+}
+
+.product_img {
+    width: 650px;
+    /* is there a better way than using px? */
+    border: 3px solid black;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 18%;
+    font-size: 29px;
+    padding: 20px 15px;
+}
+
+#cust {
+    width: 350px;
+    /* is there a better way than using px? */
+}
+
+.Dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+select {
+    font-size: 24px;
+}
+
+#glazingOptions {
+    width: 100%;
+}
+
+#size {
+    width: 100%;
+}
+
+.AddtoCart_box {
+    text-align: right;
+}
+
+.AddtoCart_box p {
+    display: inline;
+    margin-right: 30px;
+}
+
+
+
+#AddtoCart {
+    width: 200px;
+    font-size: 25px;
+    padding: 12px 20px;
+}
+
+
+#AddtoCart:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
+#PRODUCTS:link {
+    text-decoration: none;
+}
+
+#PRODUCTS:visited {
+    text-decoration: none;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+}
+
+#PRODUCTS:hover {
+    text-decoration: none;
+}
+
+.HEADER:hover {
+    font-weight: bold;
+}
+
+/* @media (min-width: 412px); */
