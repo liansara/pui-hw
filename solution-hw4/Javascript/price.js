@@ -72,7 +72,7 @@ function AddingtoCart() {
     let roll = new Roll(rollName, selectedGlazing, selectedPackSize, rolls[rollType].basePrice);
     console.log(roll);
     cart.push(roll);
-    console.log(cart); //KEEP THIS and delete other console logs
+    console.log(cart); //remember to KEEP THIS and delete other console logs
 }
 
 
@@ -95,24 +95,6 @@ function displayPrice(finalPrice) {
     displayPrice.innerText = "$" + roundPrice;                                 //change the element in html & show $ sign 
 }
 
-
-
-// --------------------------------------converting HTML to JS (notes to self) -------------------------------------------------
-//-------TO CREATE AND ADD CHILDREN TO DROPDOWN------
-
-//1. make this element <option value="Keep original">Keep original</option>
-// var opt = document.createElement('option'); //opt = <option></option>
-// opt.value = "Keep original"; //opt = <option value = "Keep original"></option>
-// opt.innerText = "Keep original"; //opt = <option value="Keep original">Keep original</option>
-
-//2. find the dropdown
-// selectedGlazingOption = document.querySelector("#glazingOptions");
-// console.log(selectedGlazingOption);
-
-
-//3. add that element
-// selectedGlazingOption.appendChild(opt);
-//-----------------------------------------------
 
 
 
