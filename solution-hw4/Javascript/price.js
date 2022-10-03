@@ -1,4 +1,13 @@
-/* -----------------------------Set up all the options in arrays---------------------------------- */
+class Roll {                                                                   //code provided
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+/* -----------------------------Set up all the options---------------------------------- */
 let allGlazingOptions = {
     "Keep original": 0,
     "Sugar milk": 0,
@@ -29,7 +38,48 @@ for (bunPack in allPackSizes) {                                         // loop 
     selectedPackSize.appendChild(opt);
 }
 
-/* -------------------------------------Set up the functions---------------------------------- */
+/* -------------------------------------HW4 dynamic Detail Page Heading, Image, Price---------------------------------- */
+const queryString = window.location.search;             // code provided 
+const params = new URLSearchParams(queryString);
+const rollType = params.get('roll');                    // replacing the end of the URL to the name of the buns
+
+// console.log(rollType);
+
+
+let rollHeading = document.querySelector(".menu");
+let rollPrice = document.querySelector(".AddtoCart_box p");
+let rollImage = document.querySelector(".product_img");
+
+rollHeading.innerText = rollType + " Cinnamon Roll";
+rollPrice.innerText = rolls[rollType].basePrice;
+rollImage.src = "assets/products/" + rolls[rollType].imageFile;
+
+
+
+//document.querySelector(".product_img").src = "assets/products/walnut-cinnamon-roll.jpg";
+
+//console.log(document.querySelector(".AddtoCart_box p"));
+//console.log(rolls[rollType].basePrice);
+// let document.querySelector("product_img").src = "assets/products/double-chocolate-cinnamon-roll.jpg";
+
+
+
+function AddingtoCart() {
+    let rollName = rollType + " Cinnamon Roll";
+    let selectedGlazing = document.querySelector("#glazingOptions").value; //finds the current selection in dropdown 1
+    let selectedPackSize = document.querySelector("#size").value;
+
+    let roll = new Roll(rollName, selectedGlazing, selectedPackSize, rolls[rollType].basePrice);
+    console.log(roll);
+    cart.push(roll);
+    console.log(cart); //KEEP THIS and delete other console logs
+}
+
+
+
+
+
+/* -------------------------------------Set up the Add to Cart functions---------------------------------- */
 function calculatePrice() {
     selectedGlazingOption = document.querySelector("#glazingOptions").value;   //gets selected value from 1st dropdown
     selectedPackSize = document.querySelector("#size").value;                  //gets selected value from 2nd dropdown

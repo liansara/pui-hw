@@ -6,7 +6,9 @@
   <meta name="author" content="Sara Lian">
   <title>Product Detail Page</title>
   <link href="css/detailPG_style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="Javascript/rollsData.js" defer></script>
   <script type="text/javascript" src="Javascript/price.js" defer></script>
+
 </head>
 
 <body>
@@ -70,7 +72,8 @@
         <div class="AddtoCart_box">
 
           <p>$2.49</p>
-          <input type="button" id="AddtoCart" value="Add to Cart" />
+          <button id="AddtoCart_button" onclick="AddingtoCart()">Add to Cart</button>
+          <!-- <input type="button" id="AddtoCart" value="Add to Cart" /> -->
 
         </div>
       </div>

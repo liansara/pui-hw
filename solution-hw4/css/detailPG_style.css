@@ -129,14 +129,14 @@ select {
 
 
 
-#AddtoCart {
+#AddtoCart_button {
     width: 200px;
     font-size: 25px;
     padding: 12px 20px;
 }
 
 
-#AddtoCart:hover {
+#AddtoCart_button:hover {
     background-color: yellow;
     font-weight: bold;
 }
