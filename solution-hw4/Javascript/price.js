@@ -43,9 +43,6 @@ const queryString = window.location.search;             // code provided
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');                    // replacing the end of the URL to the name of the buns
 
-// console.log(rollType);
-
-
 let rollHeading = document.querySelector(".menu");
 let rollPrice = document.querySelector(".AddtoCart_box p");
 let rollImage = document.querySelector(".product_img");
@@ -54,23 +51,12 @@ rollHeading.innerText = rollType + " Cinnamon Roll";
 rollPrice.innerText = rolls[rollType].basePrice;
 rollImage.src = "assets/products/" + rolls[rollType].imageFile;
 
-
-
-//document.querySelector(".product_img").src = "assets/products/walnut-cinnamon-roll.jpg";
-
-//console.log(document.querySelector(".AddtoCart_box p"));
-//console.log(rolls[rollType].basePrice);
-// let document.querySelector("product_img").src = "assets/products/double-chocolate-cinnamon-roll.jpg";
-
-
-
 function AddingtoCart() {
     let rollName = rollType + " Cinnamon Roll";
     let selectedGlazing = document.querySelector("#glazingOptions").value; //finds the current selection in dropdown 1
     let selectedPackSize = document.querySelector("#size").value;
 
     let roll = new Roll(rollName, selectedGlazing, selectedPackSize, rolls[rollType].basePrice);
-    console.log(roll);
     cart.push(roll);
     console.log(cart); //remember to KEEP THIS and delete other console logs
 }
