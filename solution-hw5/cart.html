@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="author" content="Sara Lian">
+<title>Shopping Cart</title>
+<link href="css/cart_style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="Javascript/price.js" defer></script>
+<script type="text/javascript" src="Javascript/rollsData.js" defer></script>
+
+<body>
+
+  <!--------------------------------- Header level --------------------------------->
+  <div class="top-section">
+    <a href="./index.html">
+      <img id="bun-logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bakeshop name and its black/white bun logo">
+      <!--width=20% height="20%"-->
+    </a>
+
+    <div class="top-right">
+      <div class="tabs">
+
+        <a class="HEADER" href="./index.html" id="PRODUCTS">
+          PRODUCTS
+        </a>
+
+        <a class="HEADER" href="./cart.html" id="CART">
+          CART
+        </a>
+
+      </div>
+
+      <div class="menu">Shopping cart </div>
+    </div>
+
+  </div>
+  <!--------------------------------- Content level --------------------------------->
+  <div class="content">
+
+    <div class="Cart_content">
+      <div class="product">
+        <div class="IMAGE_block">
+          <img class="product_img" src="assets/products/original-cinnamon-roll.jpg"
+            alt="single glazed cinnamon roll with 2 cinnamon sticks on a dish"> <br>
+          <a class="REMOVE">Remove</a>
+        </div>
+        <div class="text_block">
+          <p>Original Cinnamon Roll <br>
+            Glazing: Keep original<br>
+            Pack Size: 1</p>
+        </div>
+        <div class="price_block">
+          <p class="SUBtotal">$ 2.49</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="IMAGE_block">
+          <img class="product_img" src="assets/products/double-chocolate-cinnamon-roll.jpg" alt=""> <br>
+          <a class="REMOVE">Remove</a>
+        </div>
+        <div class="text_block">
+          <p>Double-chocolate cinnamon roll<br>
+            Glazing: Sugar milk<br>
+            Pack Size: 6</p>
+        </div>
+        <div class="price_block">
+          <p class="SUBtotal">$ 27.45</p>
+        </div>
+      </div>
+
+
+      <div class="product" id="SUBTOTAL">
+        <div class="IMAGE_block"></div>
+        <div class="text_block">Total</div>
+        <div class="price_block">$ 29.94</div>
+      </div>
+
+      <div class="product" id="Checkout_block">
+        <input type="button" id="Checkout" value="Checkout" />
+      </div>
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>
