@@ -1,11 +1,11 @@
-class Roll {                                                                   //code provided
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
-}
+// class Roll {                                                                   //code provided
+//     constructor(rollType, rollGlazing, packSize, basePrice) {
+//         this.type = rollType;
+//         this.glazing = rollGlazing;
+//         this.size = packSize;
+//         this.basePrice = basePrice;
+//     }
+// }
 
 /* -----------------------------Set up all the options---------------------------------- */
 let allGlazingOptions = {
