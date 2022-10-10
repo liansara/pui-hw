@@ -27,40 +27,97 @@ shoppingCart.add(bunB);
 shoppingCart.add(bunC);
 shoppingCart.add(bunD);
 
-console.log(shoppingCart);
-//--------------------------Setup the 4 items on cart.html-----------------------------------------------------------
-function calculatePrice(basePrice, rollPrice, packPrice) {
-    return ((basePrice + rollPrice) * packPrice);
+
+
+let allGlazingOptions = {
+    "Keep original": 0,
+    "Sugar milk": 0,
+    "Vanilla milk": 0.5,
+    "Double chocolate": 1.5,
 }
 
-for (items of shoppingCart) {
-    console.log("hello");
+let allPackSizes = {
+    1: 1,
+    3: 3,
+    6: 5,
+    12: 10,
+}
+
+
+//--------------------------Setup the 4 items on cart.html-----------------------------------------------------------
+
+function calculatePrice(basePrice, glazingPrice, packPrice) {
+    return (parseFloat(basePrice + glazingPrice) * packPrice);
+}
+
+let totalPrice = 0;
+
+
+function handleCart(item) {
 
     const template = document.querySelector('template');         // find template in html
     const clone = template.content.cloneNode(true);              // copy the whole template
-    document.querySelector(".Cart_content").append(clone);       //put the copied data under the parent of template
-    let cartElement = clone.querySelector('.product');         //      
+
+    let cartElement = clone.querySelector('.product');         //   
     //cartElement.querySelector('.rollNameOp').innerText = "hello";
     //console.log(clone);
 
-    let cartImage = cartElement.querySelector("product_img"); //get html element (img)
-    cartImage.src = "/assets/products/double-chocolate-cinnamon-roll.jpg";
+    let cartImage = cartElement.querySelector(".product_img"); //get html element (img)
+    cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
 
     let cartItemName = cartElement.querySelector(".rollNameOp");
-    cartItemName.innerText = "hello";
+    cartItemName.innerText = item.type + " Cinnamon Roll";
 
     let cartGlazing = cartElement.querySelector(".glazingOp");
-    cartGlazing.innerText = "check";
+    cartGlazing.innerText = item.glazing;
+
+    let cartPackSize = cartElement.querySelector(".PackSizeOp");
+    cartPackSize.innerText = "Pack Size: " + item.size;
+
+    //calculate the subtotal for each line
+    let cartSubtotal = cartElement.querySelector(".SUBtotal");
+    let calculatedPriceinCart = calculatePrice(item.basePrice, allGlazingOptions[item.glazing], allPackSizes[item.size]).toFixed(2);
+    cartSubtotal.innerText = "$ " + calculatedPriceinCart;
+
+    //calculate the total price for the cart 
+    let cartFinalPrice = document.querySelector(".price_block");
+    totalPrice = totalPrice + parseFloat(calculatedPriceinCart);
+    cartFinalPrice.innerText = "$ " + totalPrice;
+
+    //
+    document.querySelector(".Cart_content").append(clone);       //put the copied data under the parent of template
+
+    let needToDelete = cartElement.querySelector(".product .REMOVE");
+    needToDelete.addEventListener("click", () => {
+        let totalPrice = parseFloat(document.querySelector(".price_block").innerText.slice(2));
+        totalPrice = totalPrice - parseFloat(calculatedPriceinCart);
+        document.querySelector(".price_block").innerText = "$ " + totalPrice.toFixed(2);
+        console.log(calculatedPriceinCart);
+        console.log(totalPrice);
+        cartElement.remove();
+        shoppingCart.delete(item);
+        console.log(shoppingCart);
+    });
+
+}
+
+for (item of shoppingCart) {
+    handleCart(item);
+}
 
 
-    let cartPackSize = cartElement.querySelector("PackSizeOp");
-    cartGlazing.innerText = "test";
+// function calculateFinalPrice() {
+//     priceCalculation = priceCalculation + 
+// }
+
+// new function to calculate the price of items in the current cart
+
 
 
     //let cartItemName = cartElement.querySelector(".rollNameOp");
     //console.log(cartElement.querySelector(".rollNameOp"));
-    // 
-    // 
+    //
+    //
     // console.log(items[0]);
 
     //make template, name, source, url, call the calculatePrice func price, ---> cartElement.querySelector
@@ -69,7 +126,7 @@ for (items of shoppingCart) {
     //delete func
     //calc the total price
 
-}
+
 
 
 
