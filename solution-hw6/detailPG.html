@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sara Lian">
+  <title>Product Detail Page</title>
+  <link href="css/detailPG_style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="Javascript/rollsData.js" defer></script>
+  <script type="text/javascript" src="Javascript/price.js" defer></script>
+  <script type="text/javascript" src="Javascript/cart.js" defer></script>
+
+</head>
+
+<body>
+
+
+  <!--------------------------------- Header level --------------------------------->
+  <div class="top-section">
+    <a href="./index.html">
+      <img id="bun-logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bakeshop name and its black/white bun logo">
+      <!--width=20% height="20%"-->
+    </a>
+
+    <div class="top-right">
+      <div class="tabs">
+
+        <a class="HEADER" href="./index.html" id="PRODUCTS">
+          PRODUCTS
+        </a>
+
+        <a class="HEADER" href="./cart.html" id="CART">
+          CART
+        </a>
+
+      </div>
+
+      <div class="menu">Original cinnamon roll
+      </div>
+    </div>
+
+  </div>
+  <!--------------------------------- Content level --------------------------------->
+
+  <div class="content">
+    <div class="container">
+
+      <div class="product">
+        <!-- child1 -->
+        <img class="product_img" src="assets/products/original-cinnamon-roll.jpg"
+          alt="single glazed cinnamon roll with 2 cinnamon sticks on a dish"> <br>
+      </div>
+
+      <div class="details">
+        <!-- child2 -->
+        <div id="cust">
+          Customize our delicious, hand-made cinammon roll to your liking!
+        </div>
+
+        <div class="Dropdown">
+          <div class="options">
+            <label id="glazing">Glazing:</label> <br>
+            <select id="glazingOptions" onchange="calculatePrice()"> </select>
+
+          </div>
+
+          <div class="options">
+            <label>Pack size:</label> <br>
+            <select id="size" onchange="calculatePrice()"></select>
+          </div>
+        </div>
+
+        <div class="AddtoCart_box">
+
+          <p>$2.49</p>
+          <button id="AddtoCart_button" onclick="AddingtoCart()">Add to Cart</button>
+          <!-- <input type="button" id="AddtoCart" value="Add to Cart" /> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
