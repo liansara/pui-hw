@@ -1,11 +1,16 @@
-// class Roll {                                                                   //code provided
-//     constructor(rollType, rollGlazing, packSize, basePrice) {
-//         this.type = rollType;
-//         this.glazing = rollGlazing;
-//         this.size = packSize;
-//         this.basePrice = basePrice;
-//     }
-// }
+/* --------------HW6 -------------------*/
+class Roll {                                                            // copy from cart.js & commented them out in cart.js
+    constructor(rollType, rollGlazing, packSize, rollPrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = rollPrice;
+    }
+}
+
+let shoppingCart = new Set();
+
+
 
 /* -----------------------------Set up all the options---------------------------------- */
 let allGlazingOptions = {
@@ -57,8 +62,10 @@ function AddingtoCart() {
     let selectedPackSize = document.querySelector("#size").value;
 
     let roll = new Roll(rollName, selectedGlazing, selectedPackSize, rolls[rollType].basePrice);
-    cart.push(roll);
-    console.log(cart); //remember to KEEP THIS and delete other console logs
+    shoppingCart.add(roll);
+    console.log(shoppingCart); //remember to KEEP THIS and delete other console logs
+    saveToLocalStorage()
+
 }
 
 
@@ -68,19 +75,45 @@ function AddingtoCart() {
 /* -------------------------------------Set up the Add to Cart functions---------------------------------- */
 function calculatePrice() {
     selectedGlazingOption = document.querySelector("#glazingOptions").value;   //gets selected value from 1st dropdown
+    //console.log("printing sekected glz option:" + selectedGlazingOption);
     selectedPackSize = document.querySelector("#size").value;                  //gets selected value from 2nd dropdown
+    //console.log("printing sekected pack size option:" + selectedPackSize);
     let glazingPrice = allGlazingOptions[selectedGlazingOption];               //gets the glazing price from the dictionary
     let packSizePrice = allPackSizes[selectedPackSize];                        //gets the pack price adaption from the dictionary
-    let finalPrice = (2.49 + glazingPrice) * packSizePrice;                   //calculates the math
-    displayPrice(finalPrice);
+    let itemPrice = (rolls[rollType].basePrice + glazingPrice) * packSizePrice;                   //calculates the math
+    displayPrice(itemPrice);
 }
 
-function displayPrice(finalPrice) {
+function displayPrice(itemPrice) {
     let displayPrice = document.querySelector(".AddtoCart_box p");             //get the element we want to change
-    let roundPrice = finalPrice.toFixed(2);                                     // make sure it displays 2 decimals
+    let roundPrice = itemPrice.toFixed(2);                                     // make sure it displays 2 decimals
     displayPrice.innerText = "$" + roundPrice;                                 //change the element in html & show $ sign 
 }
 
 
 
+/* --------------HW6 local storage-------------------*/
+function saveToLocalStorage() {
+    let rollArray = Array.from(shoppingCart);
+    //console.log("print cart1:" + shoppingCart);
 
+    let rollArrayString = JSON.stringify(rollArray);
+    //console.log("print rollArray:" + rollArrayString);
+
+    localStorage.setItem("storedRolls", rollArrayString);
+}
+
+function retrieveFromLocalStorage() {
+    let rollArrayString = localStorage.getItem("storedRolls")
+    let rollArray = JSON.parse(rollArrayString);
+    for (let rollData of rollArray) {
+        let roll = AddingtoCart();
+    }
+}
+
+if (localStorage.getItem("storedRolls") != null) {
+    retrieveFromLocalStorage();
+}
+
+
+// Lab 6 note: If you want to reset your localStorage, type localStorage.clear() in the developer console.
