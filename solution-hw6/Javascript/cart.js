@@ -29,19 +29,19 @@ let shoppingCart = new Set();                                         //array to
 
 
 
-// let allGlazingOptions = {
-//     "Keep original": 0,
-//     "Sugar milk": 0,
-//     "Vanilla milk": 0.5,
-//     "Double chocolate": 1.5,
-// }
+let allGlazingOptions = {
+    "Keep original": 0,
+    "Sugar milk": 0,
+    "Vanilla milk": 0.5,
+    "Double chocolate": 1.5,
+}
 
-// let allPackSizes = {
-//     1: 1,
-//     3: 3,
-//     6: 5,
-//     12: 10,
-// }
+let allPackSizes = {
+    1: 1,
+    3: 3,
+    6: 5,
+    12: 10,
+}
 
 
 //--------------------------Setup the 4 items on cart.html-----------------------------------------------------------
@@ -58,25 +58,25 @@ function handleCart(item) {
     const template = document.querySelector('template');         // find template in html
     const clone = template.content.cloneNode(true);              // copy the whole template
 
-    let cartElement = clone.querySelector('.product');         //   
-    //cartElement.querySelector('.rollNameOp').innerText = "hello";
-    //console.log(clone);
+    let cartElement = clone.querySelector('.product');
 
-    let cartImage = cartElement.querySelector(".product_img"); //get html element (img)
-    cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
+    // let cartImage = cartElement.querySelector(".product_img"); //get html element (img)
+    // cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
+    // //cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
 
     let cartItemName = cartElement.querySelector(".rollNameOp");
-    cartItemName.innerText = item.type + " Cinnamon Roll";
+    // cartItemName.innerText = item.type + " Cinnamon Roll";
+    cartItemName.innerText = localStorage.getItem("storedRolls").type + " Cinnamon Roll";
 
     let cartGlazing = cartElement.querySelector(".glazingOp");
-    cartGlazing.innerText = item.glazing;
+    cartGlazing.innerText = localStorage.getItem("storedRolls").glazing;
 
     let cartPackSize = cartElement.querySelector(".PackSizeOp");
-    cartPackSize.innerText = "Pack Size: " + item.size;
+    cartPackSize.innerText = "Pack Size: " + localStorage.getItem("storedRolls").size;
 
     //calculate the subtotal for each line
     let cartSubtotal = cartElement.querySelector(".SUBtotal");
-    let calculatedPriceinCart = calculatePrice(item.basePrice, allGlazingOptions[item.glazing], allPackSizes[item.size]).toFixed(2);
+    let calculatedPriceinCart = calculatePrice(localStorage.getItem("storedRolls").basePrice, allGlazingOptions[localStorage.getItem("storedRolls").glazing], allPackSizes[localStorage.getItem("storedRolls").size]).toFixed(2);
     cartSubtotal.innerText = "$ " + calculatedPriceinCart;
 
     //calculate the total price for the cart 
@@ -101,6 +101,6 @@ function handleCart(item) {
 
 }
 
-for (item of shoppingCart) {
+for (item of localStorage.getItem("storedRolls")) {
     handleCart(item);
 }
