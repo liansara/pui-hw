@@ -1,16 +1,11 @@
-/* --------------HW6 -------------------*/
-class Roll {                                                            // copy from cart.js & commented them out in cart.js
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
+class Roll {                                                                   //code provided
+    constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
-        this.basePrice = rollPrice;
+        this.basePrice = basePrice;
     }
 }
-
-let shoppingCart = new Set();
-
-
 
 /* -----------------------------Set up all the options---------------------------------- */
 let allGlazingOptions = {
@@ -26,6 +21,10 @@ let allPackSizes = {
     6: 5,
     12: 10,
 }
+
+let cart = [];
+let cartData = localStorage.getItem("cart");                            //HW6
+if (cartData) cart = Array.from(JSON.parse(cartData));
 
 selectedGlazingOption = document.querySelector("#glazingOptions");
 for (bunNames in allGlazingOptions) {                                 // loop to add glazing options 
@@ -53,7 +52,7 @@ let rollPrice = document.querySelector(".AddtoCart_box p");
 let rollImage = document.querySelector(".product_img");
 
 rollHeading.innerText = rollType + " Cinnamon Roll";
-rollPrice.innerText = rolls[rollType].basePrice;
+rollPrice.innerText = "$" + rolls[rollType].basePrice;
 rollImage.src = "assets/products/" + rolls[rollType].imageFile;
 
 function AddingtoCart() {
@@ -62,10 +61,9 @@ function AddingtoCart() {
     let selectedPackSize = document.querySelector("#size").value;
 
     let roll = new Roll(rollName, selectedGlazing, selectedPackSize, rolls[rollType].basePrice);
-    shoppingCart.add(roll);
-    console.log(shoppingCart); //remember to KEEP THIS and delete other console logs
-    saveToLocalStorage()
-
+    cart.push(roll);
+    localStorage.setItem('cart', JSON.stringify(cart));                         //HW6
+    console.log(cart); //remember to KEEP THIS and delete other console logs
 }
 
 
@@ -75,45 +73,19 @@ function AddingtoCart() {
 /* -------------------------------------Set up the Add to Cart functions---------------------------------- */
 function calculatePrice() {
     selectedGlazingOption = document.querySelector("#glazingOptions").value;   //gets selected value from 1st dropdown
-    //console.log("printing sekected glz option:" + selectedGlazingOption);
     selectedPackSize = document.querySelector("#size").value;                  //gets selected value from 2nd dropdown
-    //console.log("printing sekected pack size option:" + selectedPackSize);
     let glazingPrice = allGlazingOptions[selectedGlazingOption];               //gets the glazing price from the dictionary
     let packSizePrice = allPackSizes[selectedPackSize];                        //gets the pack price adaption from the dictionary
-    let itemPrice = (rolls[rollType].basePrice + glazingPrice) * packSizePrice;                   //calculates the math
-    displayPrice(itemPrice);
+    let finalPrice = (2.49 + glazingPrice) * packSizePrice;                   //calculates the math
+    displayPrice(finalPrice);
 }
 
-function displayPrice(itemPrice) {
+function displayPrice(finalPrice) {
     let displayPrice = document.querySelector(".AddtoCart_box p");             //get the element we want to change
-    let roundPrice = itemPrice.toFixed(2);                                     // make sure it displays 2 decimals
+    let roundPrice = finalPrice.toFixed(2);                                     // make sure it displays 2 decimals
     displayPrice.innerText = "$" + roundPrice;                                 //change the element in html & show $ sign 
 }
 
 
 
-/* --------------HW6 local storage-------------------*/
-function saveToLocalStorage() {
-    let rollArray = Array.from(shoppingCart);
-    //console.log("print cart1:" + shoppingCart);
 
-    let rollArrayString = JSON.stringify(rollArray);
-    //console.log("print rollArray:" + rollArrayString);
-
-    localStorage.setItem("storedRolls", rollArrayString);
-}
-
-function retrieveFromLocalStorage() {
-    let rollArrayString = localStorage.getItem("storedRolls")
-    let rollArray = JSON.parse(rollArrayString);
-    for (let rollData of rollArray) {
-        let roll = AddingtoCart();
-    }
-}
-
-if (localStorage.getItem("storedRolls") != null) {
-    retrieveFromLocalStorage();
-}
-
-
-// Lab 6 note: If you want to reset your localStorage, type localStorage.clear() in the developer console.

@@ -1,33 +1,16 @@
-// import rolls from "./rollsData"
-//console.log(rolls["Original"].basePrice);       prints 2.49
-
-
 //--------------------------Setup the class & shopping cart in a set----------------------------------------
-// class Roll {                                                            // code provided
-//     constructor(rollType, rollGlazing, packSize, rollPrice) {
-//         this.type = rollType;
-//         this.glazing = rollGlazing;
-//         this.size = packSize;
-//         this.basePrice = rollPrice;
-//     }
-// }
+class Roll {                                                            // code provided
+    constructor(rollType, rollGlazing, packSize, rollPrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = rollPrice;
+    }
+}
 
 let shoppingCart = new Set();                                         //array to keep the 4 items
-
-//--------------------------Setup the 4 items in HW5-----------------------------------------------------------
-//rolls["Original"].basePrice
-
-// let bunA = new Roll("Original", "Sugar milk", 1, rolls["Original"].basePrice);      // populate the 4 items
-// //console.log(bunA);
-// let bunB = new Roll("Walnut", "Vanilla milk", 12, rolls["Walnut"].basePrice);
-// let bunC = new Roll("Raisin", "Sugar milk", 3, rolls["Raisin"].basePrice);
-// let bunD = new Roll("Apple", "Keep original", 3, rolls["Apple"].basePrice);
-// shoppingCart.add(bunA);                                                               // add the 4 items into the set
-// shoppingCart.add(bunB);
-// shoppingCart.add(bunC);
-// shoppingCart.add(bunD);
-
-
+let cartData = localStorage.getItem("cart");                           // HW6
+if (cartData) shoppingCart = new Set(Array.from(JSON.parse(cartData)));
 
 let allGlazingOptions = {
     "Keep original": 0,
@@ -58,31 +41,32 @@ function handleCart(item) {
     const template = document.querySelector('template');         // find template in html
     const clone = template.content.cloneNode(true);              // copy the whole template
 
-    let cartElement = clone.querySelector('.product');
+    let cartElement = clone.querySelector('.product');         //   
+    //cartElement.querySelector('.rollNameOp').innerText = "hello";
+    //console.log(clone);
 
-    // let cartImage = cartElement.querySelector(".product_img"); //get html element (img)
-    // cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
-    // //cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
+    let cartImage = cartElement.querySelector(".product_img"); //get html element (img)
+    item.type = item.type.replace(/( Cinnamon Roll$)/, '');
+    cartImage.src = "./assets/products/" + rolls[item.type].imageFile;
 
     let cartItemName = cartElement.querySelector(".rollNameOp");
-    // cartItemName.innerText = item.type + " Cinnamon Roll";
-    cartItemName.innerText = localStorage.getItem("storedRolls").type + " Cinnamon Roll";
+    cartItemName.innerText = item.type + " Cinnamon Roll";
 
     let cartGlazing = cartElement.querySelector(".glazingOp");
-    cartGlazing.innerText = localStorage.getItem("storedRolls").glazing;
+    cartGlazing.innerText = item.glazing;
 
     let cartPackSize = cartElement.querySelector(".PackSizeOp");
-    cartPackSize.innerText = "Pack Size: " + localStorage.getItem("storedRolls").size;
+    cartPackSize.innerText = "Pack Size: " + item.size;
 
     //calculate the subtotal for each line
     let cartSubtotal = cartElement.querySelector(".SUBtotal");
-    let calculatedPriceinCart = calculatePrice(localStorage.getItem("storedRolls").basePrice, allGlazingOptions[localStorage.getItem("storedRolls").glazing], allPackSizes[localStorage.getItem("storedRolls").size]).toFixed(2);
+    let calculatedPriceinCart = calculatePrice(item.basePrice, allGlazingOptions[item.glazing], allPackSizes[item.size]).toFixed(2);
     cartSubtotal.innerText = "$ " + calculatedPriceinCart;
 
     //calculate the total price for the cart 
     let cartFinalPrice = document.querySelector(".price_block");
     totalPrice = totalPrice + parseFloat(calculatedPriceinCart);
-    cartFinalPrice.innerText = "$ " + totalPrice;
+    cartFinalPrice.innerText = "$ " + totalPrice.toFixed(2);
 
     //
     document.querySelector(".Cart_content").append(clone);       //put the copied data under the parent of template
@@ -96,11 +80,12 @@ function handleCart(item) {
         console.log(totalPrice);
         cartElement.remove();
         shoppingCart.delete(item);
+        localStorage.setItem("cart", JSON.stringify(Array.from(shoppingCart)));     //HW6
         console.log(shoppingCart);
     });
 
 }
 
-for (item of localStorage.getItem("storedRolls")) {
+for (item of shoppingCart) {
     handleCart(item);
 }
