@@ -1,9 +1,9 @@
 #pageTitle {
     position: absolute;
-    width: 427px;
-    height: 141px;
+    width: 873px;
+    height: 231px;
     left: 60px;
-    top: 60px;
+    top: 129px;
 
     font-family: 'IBM Plex Sans';
     font-style: normal;
@@ -11,7 +11,7 @@
     font-size: 45px;
     line-height: 58px;
 
-    color: #2489C1;
+    color: #000000;
 
 }
 
@@ -19,8 +19,315 @@ body {
     background: #E8EDEC;
 }
 
-/* ------------environment images---------------------------------------*/
+#intro {
+    position: absolute;
+    width: 427px;
+    height: 233px;
+    left: 953px;
+    top: 129px;
 
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #000000;
+
+}
+
+/* ------------visual images---------------------------------------*/
+
+#box {
+    position: fixed;
+    width: 75px;
+    height: 76.16px;
+    left: 109.59px;
+    top: 385px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+#road {
+    position: absolute;
+    width: 130px;
+    height: 1647px;
+    left: 77px;
+    top: 424px;
+
+}
+
+
+
+#office {
+    position: absolute;
+    width: 176px;
+    height: 258.01px;
+    left: 311px;
+    top: 429.42px;
+
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+
+}
+
+#van {
+    position: absolute;
+    width: 280px;
+    height: 106.21px;
+    left: 207px;
+    top: 907.07px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+
+#freight {
+    position: absolute;
+    width: 279.76px;
+    height: 150.51px;
+    left: 208px;
+    top: 1187.1px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#containers {
+    position: absolute;
+    width: 280px;
+    height: 97px;
+    left: 207px;
+    top: 1559px;
+
+}
+
+/* ------------texts---------------------------------------*/
+
+#bizIntTitle {
+    position: absolute;
+    width: 426px;
+    height: 70px;
+    left: 507px;
+    top: 619px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    /* visibility: hidden; */
+}
+
+
+
+
+
+/* #bizIntTitle:hover {
+    position: absolute;
+    width: 426px;
+    height: 70px;
+    left: 507px;
+    top: 619px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: blue;
+    visibility: show;
+} */
+
+
+#bizInt {
+    position: absolute;
+    width: 427px;
+    height: 305px;
+    left: 953px;
+    top: 386px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+
+#vendorTitle {
+    position: absolute;
+    width: 426px;
+    height: 70px;
+    left: 507px;
+    top: 944px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+
+#vendor {
+    position: absolute;
+    width: 427px;
+    height: 305px;
+    left: 953px;
+    top: 709px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #000000;
+
+}
+
+
+#opsTitle {
+    position: absolute;
+    width: 426px;
+    height: 70px;
+    left: 507px;
+    top: 1269px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+
+#ops {
+    position: absolute;
+    width: 427px;
+    height: 305px;
+    left: 955px;
+    top: 1032px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #000000;
+}
+
+#auditTitle {
+    position: absolute;
+    width: 426px;
+    height: 70px;
+    left: 507px;
+    top: 1596px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+#audits {
+    position: absolute;
+    width: 427px;
+    height: 305px;
+    left: 955px;
+    top: 1355px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #000000;
+}
+
+#line1 {
+    position: absolute;
+    width: 1215px;
+    height: 0px;
+    left: 165px;
+    top: 689px;
+
+    border: 1px solid #2489C1;
+}
+
+#line2 {
+
+    position: absolute;
+    width: 1215px;
+    height: 0px;
+    left: 165px;
+    top: 1014px;
+
+    border: 1px solid #2489C1;
+}
+
+
+#line3 {
+    position: absolute;
+    width: 1215px;
+    height: 0px;
+    left: 165px;
+    top: 1339px;
+    border: 1px solid #2489C1;
+}
+
+
+#line4 {
+    position: absolute;
+    width: 1215px;
+    height: 0px;
+    left: 165px;
+    top: 1663px;
+    border: 1px solid #2489C1;
+}
+
+
+
+
+/* 
 #road {
     position: absolute;
     width: 214.32px;
@@ -73,12 +380,29 @@ body {
 
 /* ------------cards------------------------------------------------*/
 
-#business_Initiatives {
+/* #business_Initiatives {
     position: absolute;
     width: 275px;
     height: 300px;
     left: 212px;
     top: 385px;
+}
+
+#business_Initiatives:hover {
+    position: absolute;
+    width: 275px;
+    height: 300px;
+    left: 212px;
+    top: 385px;
+    filter: grayscale(90%) sepia(100%)
+}
+
+#business_initiative_body {
+    visibility: hidden;
+}
+
+#business_initiative_body:hover {
+    visibility: show;
 }
 
 #line1 {
@@ -143,10 +467,10 @@ body {
     top: 1406px;
 
     border: 4px solid #2489C1;
-}
+} */
 
 /* ------------me + cars------------------------------------------------*/
-#me {
+/* #me {
     position: absolute;
     left: 765px;
     top: 280px;
@@ -167,6 +491,12 @@ body {
     transform: rotate(-164.84deg);
 }
 
+#orange_car:hover {
+    position: absolute;
+    left: 710px;
+    top: 520px;
+    transform: rotate(-100.84deg);
+}
 
 
 #blue_car {
@@ -182,4 +512,4 @@ body {
     top: 1750px;
 
     transform: rotate(-1.2deg);
-}
+}  */
