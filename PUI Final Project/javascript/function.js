@@ -15,20 +15,20 @@ var elements = document.querySelectorAll('#pink_car');
 
 anime({
     targets: "#bizIntTitle",
-    translateX: 20
+    translateX: 50
 });
 
 anime({
     targets: "#vendorTitle",
-    translateX: 20
+    translateX: 50
 });
 
 anime({
     targets: "#opsTitle",
-    translateX: 20
+    translateX: 50
 });
 
 anime({
     targets: "#auditTitle",
-    translateX: 20
+    translateX: 50
 });
