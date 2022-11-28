@@ -39,13 +39,14 @@ body {
 /* ------------visual images---------------------------------------*/
 
 #box {
-    position: fixed;
+    position: relative;
     width: 75px;
     height: 76.16px;
     left: 109.59px;
     top: 385px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 2;
 }
 
 
@@ -56,6 +57,7 @@ body {
     height: 1647px;
     left: 77px;
     top: 424px;
+    z-index: 1;
 
 }
 
@@ -121,13 +123,14 @@ body {
     align-items: flex-end;
     text-align: center;
     /* visibility: hidden; */
+    /* display: none; */
 }
 
 
 
 
 
-/* #bizIntTitle:hover {
+#bizIntTitle:hover {
     position: absolute;
     width: 426px;
     height: 70px;
@@ -144,7 +147,7 @@ body {
     text-align: center;
     color: blue;
     visibility: show;
-} */
+}
 
 
 #bizInt {
