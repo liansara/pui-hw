@@ -71,12 +71,17 @@ body {
 #road {
     position: absolute;
     width: 130px;
-    /* height: 1647px; */
-    height: resizeheight();
+    height: 1100px;
     left: 77px;
     top: 424px;
     /* z-index: 1; */
     /* margin: 25px; */
+}
+
+@media screen and (max-width: 1000px) {
+    #road {
+        height: 2200px;
+    }
 }
 
 

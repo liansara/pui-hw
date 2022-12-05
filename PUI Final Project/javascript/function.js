@@ -238,3 +238,6 @@ window.addEventListener('scroll', () => {
     box1.style.transform = `translateY(${3.5 * val}%)`;
 
 });
+
+// console.log(screen.height, (screen.height) * 1.5 + 'px');
+// $("#road").css('height', (screen.height) * 1.5 + 'px');
