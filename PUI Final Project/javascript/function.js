@@ -159,6 +159,11 @@
 // });
 
 
+function resizeheight() {
+    var height = ((screen.height) * .90);
+    return height;
+}
+
 
 
 

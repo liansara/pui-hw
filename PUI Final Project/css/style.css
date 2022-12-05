@@ -71,7 +71,8 @@ body {
 #road {
     position: absolute;
     width: 130px;
-    height: 1647px;
+    /* height: 1647px; */
+    height: resizeheight();
     left: 77px;
     top: 424px;
     /* z-index: 1; */
@@ -248,7 +249,7 @@ body {
     width: 427px;
     height: 305px;
     left: 120px;
-    top: 50px;
+    top: 150px;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
@@ -324,7 +325,7 @@ body {
     width: 90%;
     height: 0px;
     left: 165px;
-    /* top: 960px; */
+    top: 120px;
     border: 1px solid #2489C1;
 }
 
