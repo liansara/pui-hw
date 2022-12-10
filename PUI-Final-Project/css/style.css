@@ -1,22 +1,9 @@
-/* .hidden {
-    opacity: 0;
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-
-} */
-
 body {
     background: #E8EDEC;
-    /* max-width: 100%; */
 }
 
 #pageTitle {
     position: relative;
-    /* width: 873px;
-    height: 231px;*/
     left: 60px;
     top: 100px;
     font-family: 'IBM Plex Sans';
@@ -25,33 +12,19 @@ body {
     font-size: 45px;
     line-height: 58px;
     color: #000000;
-    /* padding: 5% 3% 3% 3%; */
 }
 
 #intro {
     position: relative;
-    /* width: 427px;
-    height: 233px;*/
-    /* left: 953px; */
+    left: 160px;
     top: 100px;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-
     color: #000000;
-    /* padding: 25px; */
 }
-
-
-/* .container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-end;
-} */
-
 
 /* ------------visual images---------------------------------------*/
 
@@ -61,9 +34,7 @@ body {
     height: 76.16px;
     left: 109.59px;
     top: 320px;
-
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    /* z-index: 2; */
 }
 
 
@@ -74,8 +45,6 @@ body {
     height: 1100px;
     left: 77px;
     top: 424px;
-    /* z-index: 1; */
-    /* margin: 25px; */
 }
 
 @media screen and (max-width: 1000px) {
@@ -85,7 +54,6 @@ body {
 }
 
 
-
 #office {
     position: relative;
     width: 176px;
@@ -93,7 +61,6 @@ body {
     left: 208px;
     top: 60px;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-
 }
 
 #van {
@@ -111,7 +78,6 @@ body {
     height: 150.51px;
     left: 207px;
     top: 160px;
-
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: 10px;
 }
@@ -133,9 +99,6 @@ body {
     height: 70px;
     left: 130px;
     top: 240px;
-    /* left: 507px;
-    top: 619px; */
-
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
@@ -144,33 +107,10 @@ body {
     display: flex;
     align-items: flex-end;
     text-align: center;
-    /* visibility: hidden; */
-    /* display: none; */
     margin-left: 75px;
     margin-bottom: 10%;
 
 }
-
-
-/* 
-#bizIntTitle:hover {
-    position: absolute;
-    width: 426px;
-    height: 70px;
-    left: 507px;
-    top: 619px;
-
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 52px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: blue;
-    visibility: show;
-} */
 
 
 #bizInt {
@@ -184,10 +124,7 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    /* display: flex;
-    align-items: flex-end; */
     margin-left: 85px;
-
 }
 
 
@@ -223,8 +160,6 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    /* display: flex;
-    align-items: flex-end; */
     color: #000000;
     margin-left: 85px;
 }
@@ -235,15 +170,12 @@ body {
     width: 426px;
     height: 70px;
     left: 130px;
-    top: 255px;
+    top: 252px;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
     line-height: 52px;
-    /* display: flex;
-    align-items: flex-end;
-    text-align: center; */
     color: #000000;
     margin-left: 75px;
     margin-bottom: 10%;
@@ -260,8 +192,6 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    /* display: flex;
-    align-items: flex-end; */
     color: #000000;
     margin-left: 85px;
 }
@@ -277,10 +207,6 @@ body {
     font-weight: 500;
     font-size: 40px;
     line-height: 52px;
-    /* display: flex;
-    align-items: flex-end;
-    text-align: center; */
-
     color: #000000;
     margin-left: 75px;
     margin-bottom: 10%;
@@ -298,9 +224,6 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    /* display: flex;
-    align-items: flex-end; */
-
     color: #000000;
     margin-left: 85px;
 }
@@ -310,7 +233,6 @@ body {
     width: 90%;
     height: 0px;
     left: 165px;
-    /* top: 360px; */
     border: 1px solid #2489C1;
 }
 
@@ -319,8 +241,6 @@ body {
     width: 90%;
     height: 0px;
     left: 165px;
-    /* top: 400px; */
-
     border: 1px solid #2489C1;
 }
 
@@ -340,201 +260,5 @@ body {
     width: 90%;
     height: 0px;
     left: 165px;
-    /* top: 1663px; */
     border: 1px solid #2489C1;
 }
-
-
-
-
-/* 
-#road {
-    position: absolute;
-    width: 214.32px;
-    height: 1648px;
-    left: 633px;
-    top: 322px;
-}
-
-#office {
-    position: absolute;
-    width: 89px;
-    height: 203.43px;
-    left: 788px;
-    top: 145px;
-}
-
-#van {
-    position: absolute;
-    width: 238px;
-    height: 90.28px;
-    left: 770px;
-    top: 618px;
-
-}
-
-#ship {
-    position: absolute;
-    width: 297.41px;
-    height: 160px;
-    left: 372px;
-    top: 860px;
-
-}
-
-#containers {
-    position: absolute;
-    width: 443.61px;
-    height: 151.71px;
-    left: 857px;
-    top: 1160px;
-}
-
-#bags {
-    position: absolute;
-    width: 148.97px;
-    height: 110.11px;
-    left: 652px;
-    top: 1915px;
-}
-
-/* ------------cards------------------------------------------------*/
-
-/* #business_Initiatives {
-    position: absolute;
-    width: 275px;
-    height: 300px;
-    left: 212px;
-    top: 385px;
-}
-
-#business_Initiatives:hover {
-    position: absolute;
-    width: 275px;
-    height: 300px;
-    left: 212px;
-    top: 385px;
-    filter: grayscale(90%) sepia(100%)
-}
-
-#business_initiative_body {
-    visibility: hidden;
-}
-
-#business_initiative_body:hover {
-    visibility: show;
-}
-
-#line1 {
-    position: absolute;
-    width: 278px;
-    height: 0px;
-    left: 487px;
-    top: 432px;
-    border: 3.71881px solid #2489C1;
-}
-
-#vendor_mgmt {
-    position: absolute;
-    width: 275px;
-    height: 300px;
-    left: 954.01px;
-    top: 710px;
-}
-
-#line2 {
-    position: absolute;
-    width: 254.03px;
-    height: 0px;
-    left: 700px;
-    top: 757px;
-
-    border: 4px solid #2489C1;
-    transform: rotate(0.14deg);
-}
-
-#business_ops {
-    position: absolute;
-    width: 275px;
-    height: 300px;
-    left: 212px;
-    top: 1034px;
-}
-
-#line3 {
-    position: absolute;
-    width: 254.05px;
-    height: 0px;
-    left: 485.97px;
-    top: 1083.5px;
-
-    border: 3.71881px solid #2489C1;
-}
-
-#audits {
-    position: absolute;
-    width: 275px;
-    height: 300px;
-    left: 955px;
-    top: 1359px;
-}
-
-#line4 {
-    position: absolute;
-    width: 165px;
-    height: 0px;
-    left: 791px;
-    top: 1406px;
-
-    border: 4px solid #2489C1;
-} */
-
-/* ------------me + cars------------------------------------------------*/
-/* #me {
-    position: absolute;
-    left: 765px;
-    top: 280px;
-    transform: rotate(-5deg);
-}
-
-#pink_car {
-    position: absolute;
-    left: 780px;
-    top: 350px;
-    transform: rotate(-180deg);
-}
-
-#orange_car {
-    position: absolute;
-    left: 710px;
-    top: 520px;
-    transform: rotate(-164.84deg);
-}
-
-#orange_car:hover {
-    position: absolute;
-    left: 710px;
-    top: 520px;
-    transform: rotate(-100.84deg);
-}
-
-
-
-
-
-
-
-#blue_car {
-    position: absolute;
-    left: 780px;
-    top: 1230px;
-    transform: rotate(-178.34deg);
-}
-
-#green_car {
-    position: absolute;
-    left: 720px;
-    top: 1750px;
-
-    transform: rotate(-1.2deg);
-}  */
